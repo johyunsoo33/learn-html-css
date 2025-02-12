@@ -1,11 +1,11 @@
 {
-	"scripts": {
-		"start": "live-server . --port=3000 --host=localhost --no-browser",
-		"format": "prettier . --check",
-		"write": "npx prettier --write . --ignore-path .gitignore"
-	},
-	"devDependencies": {
-		"live-server": "^1.2.2",
-		"prettier": "^3.5.0"
-	}
+  "scripts": {
+    "start": "live-server . --port=3000 --host=localhost --no-browser",
+    "format": "prettier . --check",
+    "write": "npx prettier --write . --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.0"
+  }
 }
