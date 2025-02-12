@@ -1,32 +1,44 @@
 @font-face {
-  font-family: "Noto Serif KR";
-  font-style: normal;
-  font-weight: 100;
-  src: local("Noto Serif CJK KR"), local("Source Han Serif K"),
-    local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"),
-    url(./web/NotoSerifCJKkr-ExtraLight-subset.woff) format("woff"),
-    url(./web/NotoSerifCJKkr-ExtraLight-subset.woff2) format("woff2"),
-    url(./web/NotoSerifCJKkr-ExtraLight-subset.otf) format("otf");
+	font-family: 'Noto Serif KR';
+	font-style: normal;
+	font-weight: 100;
+	src:
+		local('Noto Serif CJK KR'),
+		local('Source Han Serif K'),
+		local('Source Han Serif'),
+		local('Noto Serif CJK'),
+		local('Noto Serif'),
+		url(./web/NotoSerifCJKkr-ExtraLight-subset.woff) format('woff'),
+		url(./web/NotoSerifCJKkr-ExtraLight-subset.woff2) format('woff2'),
+		url(./web/NotoSerifCJKkr-ExtraLight-subset.otf) format('otf');
 }
 @font-face {
-  font-family: "Noto Serif KR";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Noto Serif CJK KR"), local("Source Han Serif K"),
-    local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"),
-    url(./web/NotoSerifCJKkr-Regular-subset.woff) format("woff"),
-    url(./web/NotoSerifCJKkr-Regular-subset.woff2) format("woff2"),
-    url(./web/NotoSerifCJKkr-Regular-subset.otf) format("otf"),
-    url(./web/NotoSerifCJKkr-Regular-subset.ttf) format("truetype"),
-    /* Safari, Android, iOS */;
+	font-family: 'Noto Serif KR';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		local('Noto Serif CJK KR'),
+		local('Source Han Serif K'),
+		local('Source Han Serif'),
+		local('Noto Serif CJK'),
+		local('Noto Serif'),
+		url(./web/NotoSerifCJKkr-Regular-subset.woff) format('woff'),
+		url(./web/NotoSerifCJKkr-Regular-subset.woff2) format('woff2'),
+		url(./web/NotoSerifCJKkr-Regular-subset.otf) format('otf'),
+		url(./web/NotoSerifCJKkr-Regular-subset.ttf) format('truetype'),
+		/* Safari, Android, iOS */;
 }
 @font-face {
-  font-family: "Noto Serif KR";
-  font-style: normal;
-  font-weight: 600;
-  src: local("Noto Serif CJK KR"), local("Source Han Serif K"),
-    local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"),
-    url(./web/NotoSerifCJKkr-Bold-subset.woff) format("woff"),
-    url(./web/NotoSerifCJKkr-Bold-subset.woff2) format("woff2"),
-    url(./web/NotoSerifCJKkr-Bold-subset.otf) format("otf");
+	font-family: 'Noto Serif KR';
+	font-style: normal;
+	font-weight: 600;
+	src:
+		local('Noto Serif CJK KR'),
+		local('Source Han Serif K'),
+		local('Source Han Serif'),
+		local('Noto Serif CJK'),
+		local('Noto Serif'),
+		url(./web/NotoSerifCJKkr-Bold-subset.woff) format('woff'),
+		url(./web/NotoSerifCJKkr-Bold-subset.woff2) format('woff2'),
+		url(./web/NotoSerifCJKkr-Bold-subset.otf) format('otf');
 }
