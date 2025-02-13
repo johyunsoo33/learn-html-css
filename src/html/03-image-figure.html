@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>이미지와 피규어</title>
+	</head>
+	<body>
+		<h1>이미지 삽입하기</h1>
+		<!-- 비트맵 이미지 삽입-->
+		<!-- img테그는 이미지를 삽입을 하는 기능을 담당한다. -->
+		<!--대체 택스트 alt 안에는 이미지에 담긴 정보를 텍스트만으로 이해할수 있게끔 정보를 돋등하게 적어줘야한다.-->
+		<section>
+			<h2>비트맵 이미지</h2>
+			<img
+				src="/src/assets/food/cake.jpeg"
+				alt="Peace of Cake(한조각의 평화) - 밀크레이프 , 수플레치즈 , 초코 티라미슈 , 데블스 초코 , 더블치즈 "
+			/>
+			<br />
+			<img
+				src="/src/assets/food/icecream.webp"
+				alt="밴엔제리 파인트 아이스크림"
+			/>
+		</section>
+		<hr />
+		<section>
+			<h2>벡터 이미지</h2>
+			<!--이미지의 대체텍스트는 이미지에 명환한 정보가 있다면 정보를 기입하면되는데 그렇지 않은경우에는 맥락(context)에 따라 다르게 작성될수있다. -->
+
+			<!-- svg를 vs code내에서 수정하려면 svg preview 확장프로그램을 설치후에 클릭하면 되는데 
+       그래도 안되면 vs코드 명령어 입력창에 편집기 다시열기(Reopen Editor with...)를 누르고 텍스트를 선택하면 가능 -->
+
+			<img
+				src="/src/assets/svg/chitchat.svg"
+				alt="chitchat 대표이미지"
+				width="100px"
+				height="100px"
+			/>
+
+			<svg
+        aria-label="1대1 채팅"
+				class="h-12 w-12"
+				viewBox="0 0 40 40"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<defs>
+					<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+						<stop stop-color="#239733" offset="0%"></stop>
+						<stop stop-color="#13541E" offset="100%"></stop>
+					</linearGradient>
+					<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+						<stop stop-color="#73DF22" offset="0%"></stop>
+						<stop stop-color="#4721EB" offset="100%"></stop>
+					</linearGradient>
+				</defs>
+				<g fill="none" fill-rule="evenodd">
+					<path
+						d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z"
+						fill="url(#a)"
+						transform="translate(1 1)"
+					></path>
+					<path
+						d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z"
+						fill="url(#b)"
+						transform="translate(1 1)"
+					></path>
+					<path
+						d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+						fill="#FFF"
+					></path>
+				</g>
+			</svg>
+		</section>
+		<hr />
+		<!--figure-->
+		<figure>
+			<!--  -->
+			<img src="" alt="" />
+		</figure>
+	</body>
+</html>
