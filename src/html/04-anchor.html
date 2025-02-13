@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>하이퍼링크</title>
+	</head>
+	<body>
+		<h1>하이퍼 링크</h1>
+		<section>
+			<!--anchor 테그 -->
+			<!-- a테그는 href 속성을통해 다른 페이지나 같은 페이지의 어느 위치 , 파일 , 이메일 주소와 
+       그 외 다른 URL로 연결할수있는 하이퍼링크를 말한다.  a안의 콘텐츠는 링크 목적지의 설명을 나타내야 한다. -->
+
+			<!-- a의 속성으로 대표적인 예로 target이 있다  target="-blank"는 해당링크를 새탭으로 링크 연결
+        target="_self"은 현재의 탭에 링크 연결-->
+			<a href="https://bootcamp.likelion.net/" target="blank"
+				>멋쟁이 사자처럼 프론트엔드 부트캠프</a
+			>
+			<!-- target:"_blank"에서 _를 입력하지 않을경우 blank라는 탭이 있는지 파악하고 없으면 blank라는 이름을 가진 탭을 생성 
+       하나만 있을때는 차이점이 없지만 target="blank"속성을가진 a태그가 2개이상이라면 
+       새탭이 계속 생기는게아닌 blank라는 이름을 가진 탭에서 링크가 바뀌게 된다.-->
+			<a href="https://bootcamp.likelion.net/" target="blank">깃허브</a>
+
+			<!-- 글로벌 속성[class / style / title / ... ] 여기서 title은 요소에 대한 설명을 제공하며, 마우스를 올리면 툴팁으로 표시된다.   -->
+			<!-- rel="noopenner" 속성은 열린 창에서 속성을 설정하지 않음으로써( 를 반환함) 
+         새 탐색 컨텍스트에 해당 문서를 연 문서에 대한 액세스 권한을 부여하지 않고 대상 리소스로 이동하도록 브라우저에 지시합니다  -->
+			<!-- rel="noopenner" 속성을 설정하면 target="_blank"의 기능인 새 탭에서 링크를 열 때 기존 탭과 새 탭 간의 연결을 끊는 역할을 합니다. -->
+			<a
+				href="https://www.naver.com"
+				target="_blank"
+				title="네이버 사이트로 이동합니다(새창)"
+				rel="noopener noreferrer"
+				>네이버로 가기</a
+			>
+		</section>
+
+		<br />
+		<section>
+			<h2>이미지 링크</h2>
+			<!-- 이미지에 링크를 걸려면 a 테그 안에 img테그가 와야한다. -->
+			<a href="https://www.apple.com/kr/store" title="애플 스토어 링크"
+				><img
+					src="/src/assets/apple/apple_watch.jpeg"
+					alt="애플워치 이미지"
+					width="150px"
+					height="150px"
+			/></a>
+
+			<!-- download 속성은 a테그에서만 사용할수있으며 클릭시에 파일을 다운로드 할수있는 기능을 제공한다. 
+       download ="다운로드될 파일의 이름을 여기에 기입"-->
+			<h2>PDF 링크</h2>
+			<a
+				href="/src/assets/pdf/google-seo-guide-ko.pdf"
+				download="google-seo-guide-ko.pdf"
+				>구글 SEO 가이드</a
+			>
+		</section>
+		<hr />
+		<section>
+			<h2>이메일과 전화번호 연결</h2>
+			<a href="mailto:johyunsoo369@naver.com?subject=문의사항"
+				>johyunsoo369@naver.com</a
+			>
+			<br />
+			<a href="tel:+8201012341234">고객센터 010-1234-1234</a>
+		</section>
+
+		<section>
+			<h2>사례</h2>
+			<!-- 사례1 -->
+			<h2><a href=""></a></h2>
+
+			<!-- 사례2 -->
+			<a href="">
+				<h2></h2>
+			</a>
+		</section>
+		<h2>사례</h2>
+
+		<br />
+		<hr />
+		<br />
+		<!-- 실습1 -->
+		<h2>하이퍼 링크 및 이미지 UI 실습</h2>
+		<figure style="width: 300px; height: 300px">
+			<img src="/src/assets/cafew/card-02-@1x.jpg" alt="카페 이미지" />
+			<figcaption>
+				RESPONSIVE WEB <br />
+				DESIGN STRATEGIES
+				<br /><br />
+				<p><b>반응형 웹디자인 전략</b></p>
+				<a href="https://bootcamp.likelion.net/">강의정보</a>
+			</figcaption>
+		</figure>
+	</body>
+</html>
