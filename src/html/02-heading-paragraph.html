@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제목과 단락</title>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
   </head>
   <body>
     <!-- 제목 -->
@@ -26,5 +39,22 @@
       문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는
       것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
     </p>
+    <hr />
+
+    <section>
+      <h1 class="sr-only">카페 W 매장 찾기</h1>
+      <h2>카페 W를 가까이에서 경험해보세요</h2>
+      <h3>고객과 가장 가까이 있는 매장을 찾아보세요</h3>
+    </section>
+
+    <section>
+      <p>
+        차별화된 커피 경험을 누릴수 있는 <strong>리저브 매장</strong> <br />
+        다양한 방법으로 편리하게 즐길 수 있는 드라이브 <strong>스루 매장</strong
+        ><br />
+        함께해서 더 따뜻할수 있는 지역사호 소통 공간
+        <strong>커뮤니티 매장</strong>
+      </p>
+    </section>
   </body>
 </html>
