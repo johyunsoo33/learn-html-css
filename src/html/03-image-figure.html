@@ -7,16 +7,20 @@
 	</head>
 	<body>
 		<h1>이미지 삽입하기</h1>
+
 		<!-- 비트맵 이미지 삽입-->
 		<!-- img테그는 이미지를 삽입을 하는 기능을 담당한다. -->
 		<!--대체 택스트 alt 안에는 이미지에 담긴 정보를 텍스트만으로 이해할수 있게끔 정보를 돋등하게 적어줘야한다.-->
 		<section>
 			<h2>비트맵 이미지</h2>
+
 			<img
 				src="/src/assets/food/cake.jpeg"
 				alt="Peace of Cake(한조각의 평화) - 밀크레이프 , 수플레치즈 , 초코 티라미슈 , 데블스 초코 , 더블치즈 "
 			/>
+
 			<br />
+
 			<img
 				src="/src/assets/food/icecream.webp"
 				alt="밴엔제리 파인트 아이스크림"
@@ -37,11 +41,13 @@
 				height="100px"
 			/>
 
+			<!-- svg파일은 아래처럼 코드로 주어도 된다.  -->
 			<svg
-        aria-label="1대1 채팅"
 				class="h-12 w-12"
 				viewBox="0 0 40 40"
 				xmlns="http://www.w3.org/2000/svg"
+				width="50px"
+				height="50px"
 			>
 				<defs>
 					<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
@@ -72,10 +78,47 @@
 			</svg>
 		</section>
 		<hr />
-		<!--figure-->
-		<figure>
-			<!--  -->
-			<img src="" alt="" />
-		</figure>
+
+		<section>
+			<h2>figure 사용하기</h2>
+			<!--figure는 이미지,도표 등 독립적인 콘텐츠로 그룹화하는 시멘틱테그  -->
+			<figure>
+				<!--이미지-->
+				<!-- loading ="lazy" 속성은 지연로딩을 말하는데 사용자가 필요로 할때 일부 자원(이미지 같은)을 지연해서 로딩하는 전략
+         제대로 구현되었다면 사용자에게 끊김이 없다는 느낌을 주고 페이지가 움직일때까지 필요한 자원감소의 이점을 제공한다.-->
+				<img
+					src="/src/assets/drama/good-partner-narrow.webp"
+					alt="굿파트너 속 장나라"
+					width="284px"
+					height="400px"
+					loading="lazy"
+				/>
+				<!--figcaption은 figure요소에대한 설명을 제공하는 역할 (스크린 리더시에 읽어준다.)-->
+				<!-- <figure>는 콘텐츠를 감싸는 "독립적인 작은 박스" 더 큰박스 속 작은박스 레이아웃을 나누는게아닌 그 레이아웃속의 일부일뿐 -->
+				<figcaption>드라마 굿파트너 속 장나라</figcaption>
+			</figure>
+
+			<figure>
+				<img
+					src="/src/assets/drama/mon-friend-son-narrow.webp"
+					alt="엄마친구 아들 타이틀 이미지"
+					width="284px"
+					height="400px"
+					loading="lazy"
+				/>
+				<figcaption>엄마 친구 아들</figcaption>
+			</figure>
+
+			<figure>
+				<img
+					src="/src/assets/drama/emily-in-paris-narrow.jpg"
+					alt="에밀리 파리에 가다 타이틀 이미지"
+					width="284px"
+					height="400px"
+					loading="lazy"
+				/>
+				<figcaption>에밀리 파리에 가다</figcaption>
+			</figure>
+		</section>
 	</body>
 </html>
