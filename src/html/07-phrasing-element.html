@@ -4,6 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>프레이징 요소</title>
+		<style>
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border-width: 0;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>프레이징 요소</h1>
@@ -20,6 +33,7 @@
 			</p>
 			<br />
 			<p>
+				<!-- aria-hidden 스크린 리더에서 이부분의 특수문자를 읽을지 말지를 결정하는 속성-->
 				<span aria-hidden="true">★★★★★</span>
 				<b><span class="sr-only">강의 평점</span>5점</b>
 				<i><span class="sr-only">수강생</span>우정민</i>
