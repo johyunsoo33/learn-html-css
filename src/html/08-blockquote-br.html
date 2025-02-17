@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>인용문과 줄바꿈</title>
+	</head>
+	<body>
+		<h1>인용문과 줄바꿈</h1>
+		<!--문장내에서 인용구문이 사용이 필요한경우-->
+		<section>
+			<h2>인용문의 종류</h2>
+			<!--인라인 인용 요소 / 인라인 인용 요소 표준 명세 -->
+			<q>인라인 인용 엘리먼트</q>
+			<!--창작물 참조 요소 / 창작물 참조 요소 표준 명세-->
+			<cite></cite>
+			<!-- 블록 인용 요소 / 블록 인용 요소 표준 명세-->
+			<blockquote>블록 인용 엘리먼트</blockquote>
+		</section>
+
+		<section>
+			<h2>블록인용문 실습1</h2>
+			<blockquote>
+				<!-- &nbsp;는 글자간의 공백을 엔티티값으로 표현한것 글자간의 간격을 더 늘리고 싶을대 사용 -->
+				<p>
+					우리가 할수있는 노력은 과장이 전부야<br />
+					결과는 우리 손안에 있는 게 아니야 <br />
+					결과까지 선머개 넣으려다 보니까<br />
+					무리수를 두는거야
+				</p>
+				<!-- < 과 > 을 직접 키보드에서 주어진 값으로 할경우에는 브라우저에서는 테그로 인식할수있다.  -->
+				<!-- 따라서 특수문자 같은 경우에는 엔티티값을 사용해서  작성하자 -->
+				<cite><i>드라마 &lt;미생&gt;중에서 </i></cite>
+			</blockquote>
+		</section>
+
+		<hr />
+
+		<section>
+			<h2>인라인인용문 실습1</h2>
+			<p>
+				인상깊은 드라마를 시청했는데 대사가 마음을 움직였어. 대사는
+				<q cite="https://www.tving.com/contents/P000151356">우리가 할 수 있는 노력은 과정이 전부야</q>
+				라는 말이었어.
+			</p>
+		</section>
+		<!-- <section>
+			<h2>인용문 실습1</h2>
+			<blockquote>
+				우리가 할수있는 노력은 과장이 전부야<span> </span> 결과는 우리
+				손안에 있는 게 아니야<span> </span> 결과까지 선머개 넣으려다
+				보니까<span> </span>
+				무리수를 두는거야
+			</blockquote>
+
+			<cite><i>드라마 &lt;미생&gt;중에서</i></cite>
+		</section> -->
+	</body>
+</html>
