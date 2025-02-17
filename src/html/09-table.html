@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>테이블 관련 요소</title>
+		<style>
+			table,
+			th,
+			td {
+				border: 1px solid currentColor;
+				border-spacing: 0;
+				/* 경합된 보더를 합쳐서 표현해주는 css 코드 */
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 행과 열로 이루어진 표형식의 콘테츠를 마크업할때 쓰임 -->
+		<h1>테이블</h1>
+		<h2>테이블 요소</h2>
+		<!-- 테이블 요소  -->
+		<table>
+			<!-- 테이블의 제목을 마크업 할때 쓰이는 요소 -->
+			<caption>
+				멋쟁이 사자처럼 프론트엔드 13기 수강생
+			</caption>
+
+			<!-- 테이블 열 그룹 요소 / 테이블 열 그룹 요소 표준 명세 -->
+			<colgroup>
+				<!-- 테이블 열 요소 / 테이블 열 요소 표준 명세 -->
+				<!-- 한열 자체에 대한 그룹화를 시켜준다 -->
+				<col />
+				<col span="2" />
+				<col />
+			</colgroup>
+
+			<!-- 테이블 헤더 행 블록 요소 / 테이블 헤더 행 요소 표준 명세 -->
+			<!-- 테이블 내용에서 기준의 되는 내용 -->
+			<thead>
+				<!-- 테이블의 행을 마크업하는 요소 -->
+				<tr>
+					<!-- 테이블 제목 셀 요소 -->
+					<th scope="col">번호</th>
+					<th scope="col">강사</th>
+					<th scope="col">멘토</th>
+					<th scope="col">운영진진</th>
+				</tr>
+			</thead>
+
+			<!-- 테이블 푸터 행 블록 요소 / 테이블 푸터 행 블록 요소 표준 명세 -->
+			<!-- 먼저 마크업을 해주면 현업에서 편하다(tbody의 내용이 계속 늘어나기때문) -->
+			<tfoot>
+				<tr>
+					<th scope="row">인원수</th>
+					<td>2명</td>
+					<td>2명</td>
+					<td>2명</td>
+					<td></td>
+				</tr>
+			</tfoot>
+
+			<!-- 테이블 바디 블록 요소 / 데이블 바디 블록 요소 표준 명세  -->
+			<!-- 테이블의 데이터 내욜을 담는 공간간 -->
+			<tbody>
+				<!-- 테이블의 행을 마크업하는 요소 -->
+				<tr>
+					<!-- 데이블 내용(데이터) 셀 요소 -->
+					<th scope="row">1</th>
+					<td>슬비쌤</td>
+					<td>권석기 멘토님</td>
+					<td>정재인 매니저님</td>
+				</tr>
+
+				<!-- 테이블의 행을 마크업하는 요소 -->
+				<tr>
+					<!-- 데이블 내용(데이터) 셀 요소 -->
+					<th scope="row">2</th>
+					<td>길용쌤</td>
+					<td>유진혁 멘토님</td>
+					<td>금윤호 매니저님</td>
+				</tr>
+
+				<!-- 테이블의 행을 마크업하는 요소 -->
+				<tr>
+					<!-- 데이블 내용(데이터) 셀 요소 -->
+					<th scope="row">3</th>
+					<td>특강 강사 범쌤</td>
+					<td></td>
+					<td>김태진 매니저님</td>
+				</tr>
+
+        <tr>
+          <!-- colspan은 col (가로형 , 행) 방향으로 병합  -->
+           <!-- rowspan은 row(세로형 , 열) 방행으로 병합 -->
+          <td colspan="2" rowspan="2">&nbap;</td>
+          <td colspan="2">&nbap;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbap;</td>
+        </tr>
+			</tbody>
+		</table>
+
+    <hr />
+
+    <h2>테이블 예제</h2>
+
+		<table>
+			<caption>테이블 실습</caption>
+
+			<tr>
+				<th id="h1">학습시간</th>
+				<td headers="h1">09:00 ~ 17:00(28시간)</td>
+
+				<th id="h5">난이도</th>
+				<td headers="h5">초급</td>
+			</tr>
+			
+			<tr>
+				<th id="h2">교육비 지원</th>
+				<td headers="h2">고용보험 비환급</td>
+
+				<th id="h6">평가항목</th>
+				<td headers="h6">출석률 100%</td>
+			</tr>
+
+			<tr>
+				<th id="h3">수료기준</th>
+				<td headers="h3">총점 80점 이상시 수료료</td>
+
+				<th id="h7">정원</th>
+				<td headers="h7">24명</td>
+			</tr>
+
+			<tr>
+				<th id="h4">교재정보</th>
+				<td headers="h4" colspan="3">입문자를 위한 git과 html/css <br />
+				html & css 웹사이트 개발과 디자인 기초
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
