@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>picture 와 source 요소</title>
+	</head>
+	<body>
+		<h1>picture 와 source 요소</h1>
+		<section>
+			<h2>img에 반응형 속성인 srcset과 size를 추가한경우</h2>
+			<div>
+				<!-- srcset속성을 통해서 브라우저가 사용자의 pixel-ratio에 가장 적합한 파일을 불러온다. -->
+				<img
+					srcset="/src/assets/logo/netflix@1x.png 1x, /src/assets/logo/netflix@2x.png 2x"
+					sizes=""
+					src="/src/assets/logo/netflix@1x.png"
+					alt="넷플릭스 로고"
+				/>
+
+				<br />
+				<!-- 이미지 형식 -->
+				<h3>이미지 형식</h3>
+
+				<img
+					srcset="/src/assets/logo/netflix@1x.webp, /src/assets/logo/netflix@2x.webp"
+					src="/src/assets/logo/netflix@1x.png"
+					alt="넷플릭스 로고"
+				/>
+			</div>
+		</section>
+		<hr />
+		<section>
+			<h2>picture</h2>
+			<div>
+				<!-- img를 담기위한 컨테이너 요소 반드시 자식요소로 img태그가 있어야함 -->
+				<!-- figure요소랑의 차이점 figure는 이미지를 위한 컨테이너가 아니다.  -->
+				<!-- figure안에 picture가 올수있다. -->
+				<!-- w는 width의 의미 -->
+				<!-- sizes에서 (max-width:???px) 440px, 800px 이라는 속성이 들어가있다면 -->
+				<!-- 브라우저의 width값이 ???까지는 이미지의 사이즈를 440px로 하고
+				  ???을 넘어가면 800px로 바꿔줘 라는 의미를 가진다. -->
+				<picture>
+					<img
+						src="/src/assets/rwd/small-550.jpg"
+						alt=""
+						srcset="
+							/src/assets/rwd/small-550.jpg    550w,
+							/src/assets/rwd/medium-1024.jpg 1024w,
+							/src/assets/rwd/large-1600.jpg  1600w
+						"
+						sizes="(max-width:600px) 440px, 100vw"
+					/>
+				</picture>
+			</div>
+		</section>
+		<hr />
+		<section>
+			<h2>source</h2>
+			<div>
+				<picture>
+					<source
+						srcset="
+							/src/assets/rwd/small-550.jpg    550w,
+							/src/assets/rwd/medium-1024.jpg 1024w,
+							/src/assets/rwd/large-1600.jpg  1600w
+						"
+						media="(max-width:600px)"
+					/>
+					<source
+						srcset="
+							/src/assets/rwd/small-550.jpg    550w,
+							/src/assets/rwd/medium-1024.jpg 1024w,
+							/src/assets/rwd/large-1600.jpg  1600w
+						"
+						media="(max-width:1024px)"
+					/>
+					<img src="/src/assets/rwd/small-550.jpg" alt="" />
+				</picture>
+			</div>
+		</section>
+	</body>
+</html>
