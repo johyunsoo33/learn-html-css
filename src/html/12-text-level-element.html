@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>텍스트 레벨 요소</title>
+	</head>
+	<body>
+		<!-- 텍스트에 강조등 의미를 부여하기 위한 요소 -->
+		<h1>텍스트 레벨 요소</h1>
+		<!-- sub 아래첨자 sup는 위첨자 -->
+		<!-- i는 글자 기울이기 -->
+		<div>
+			<i>H<sub>2</sub>SO<sup>4</sup></i>
+		</div>
+
+		<!-- 축약어 -->
+		<!-- 축약어를 적고 title에 원래의 의미를 적어준다. -->
+		<!-- abbr은 인라인 레벨이다. -->
+		<div><abbr title="점심 메뉴 추천">점메추</abbr></div>
+
+		<!-- 날짜 시간 정보를 담아야할때 쓰는 텍스트 레벨 태그  -->
+		<!-- datetime은 컴퓨터가 실제로 인식하는 정보를 담아야한다. -->
+		<!-- time 도 인라인 레벨-->
+		<div>
+			<time datetime="2025-02-18T10:27:39">2025년 2월 18일 10시 27분 작성</time>
+			<time datetime="1999-06-16T10:27:39">1999년 6월 16일 태어남</time>
+		</div>
+
+		<!-- 취소 정보 -->
+		<div>
+			정상가 <s>100,000</s>
+			할인가 9,000
+		</div>
+
+		<!-- 덧붙임 글 요소(저작권 정보와 비슷한 내용들을 담을때 쓰인다) -->
+		<div><small>copyright &copy; Likelion Bootcamp 2025</small></div>
+
+		<!-- 현재 맥락에 관련이 깊거나 중요한 부분에 글자를 하이라이트 -->
+		<div>멋쟁이 사자 처럼 <mark>프론트엔드</mark> 13기 부트캠프<div>
+	</body>
+</html>
