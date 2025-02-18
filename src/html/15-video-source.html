@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>video 와 source 요소</title>
+	</head>
+	<body>
+		<h1>video 와 source 요소</h1>
+		<section>
+			<h2>video</h2>
+			<div>
+				<video controls muted poster="/src/assets/video/poster.jpg">
+					<source src="/src/assets/video/google-developer-stories.mp4" type="video/mp4" />
+					<source src="/src/assets/video/google-developer-stories.ogg" type="video/ogg" />
+					<source src="/src/assets/video/google-developer-stories.mov" type="video/mov" />
+					<source
+						src="/src/assets/video/google-developer-stories.webm"
+						type="video/webm"
+					/>
+
+					<!--  자막, 설명, 챕터 정보, 메타데이터 등을 추가하는 역할-->
+					<!-- kind 속성은 트랙(자막, 메타데이터 등)의 유형을 지정하는 속성 -->
+					<track
+						src="/src/assets/video/google-developer-stories-subtitles-en.vtt"
+						kind="captions"
+						srclang="en"
+						label="English Caption"
+					/>
+				</video>
+				<br />
+				<video controls></video>
+			</div>
+		</section>
+	</body>
+</html>
