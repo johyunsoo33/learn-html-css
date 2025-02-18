@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>map 과 area</title>
+	</head>
+	<body>
+		<h1>map과 area</h1>
+		<section>
+			<!-- <map> 요소는 <area> 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다. -->
+			<h2>map</h2>
+			<img src="/src/assets/sprite/sns.png" usemap="#image-map" alt="SNS 서비스" />
+
+			<map id="image-map">
+				<!--<area> 요소는 미리 정의된 클릭 가능 영역이 있는 이미지 맵 내부의 영역을 정의합니다. 이미지 맵은 이미지의 기하학적 영역을 하이퍼텍스트 링크 와 연결할 수 있게 해줍니다 . -->
+				<!-- <area> 요소는  <map> 요소 내에서만 사용됩니다 . -->
+				<!-- coords는 x좌표 y좌표 반지름 순입니다 -->
+				<area
+					target="_blank"
+					alt="facebook"
+					title="facebook"
+					href="https://www.facebook.com/"
+					coords="16,14,14"
+					shape="circle"
+				/>
+				<area
+					target="_blank"
+					alt="instagram"
+					title="instagram"
+					href="https://www.instagram.com/"
+					coords="65,16,14"
+					shape="circle"
+				/>
+				<area
+					target="_blank"
+					alt="youtube"
+					title="youtube"
+					href="https://www.youtube.com/"
+					coords="116,18,14"
+					shape="circle"
+				/>
+			</map>
+		</section>
+	</body>
+</html>

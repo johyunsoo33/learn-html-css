@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>form,input요소</title>
+	</head>
+	<body>
+		<h1>form,input요소</h1>
+		<section>
+			<!-- <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타낸다. -->
+			<h2>form</h2>
+			<form action="/">
+				<!-- <fieldset> 요소는 웹 양식의 여러 컨트롤과 레이블(<label>)을 묶을 때 사용합니다. -->
+				<!-- <form>서식끼리 묶을때 사용한다. -->
+				<fieldset>
+					<!-- <legend> 요소는 부모 <fieldset> 콘텐츠의 설명을 나타냅니다. -->
+					<legend>폼 서식</legend>
+
+					<div>
+						<label for="userName">ID : </label>
+						<input type="text" id="userName" placeholder="아이디를 입력 해주세요" />
+					</div>
+
+					<div>
+						<label for="userPassword">PW : </label>
+						<input
+							type="password"
+							id="userPassword"
+							placeholder="비밀번호를 입력 해주세요"
+						/>
+					</div>
+
+					<div>
+						<label for="searchArea">검색</label>
+						<input type="search" id="searchArea" placeholder="검색어를 입력해 주세요" />
+						<button>검색하기</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+	</body>
+</html>
