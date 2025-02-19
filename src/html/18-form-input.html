@@ -10,7 +10,7 @@
 		<section>
 			<!-- <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타낸다. -->
 			<h2>form</h2>
-			<form action="/">
+			<form action="/" method="post">
 				<!-- <fieldset> 요소는 웹 양식의 여러 컨트롤과 레이블(<label>)을 묶을 때 사용합니다. -->
 				<!-- <form>서식끼리 묶을때 사용한다. -->
 				<fieldset>
@@ -19,22 +19,121 @@
 
 					<div>
 						<label for="userName">ID : </label>
-						<input type="text" id="userName" placeholder="아이디를 입력 해주세요" />
+						<!-- maxlength 최대 입력글자 수 minlength는 최소 입력 글자수 -->
+						<input
+							type="text"
+							id="userName"
+							name="userName"
+							placeholder="아이디를 입력 해주세요 예)조현수 "
+							required
+							maxlength="5"
+							minlength="3"
+						/>
 					</div>
 
+					<br />
+
 					<div>
+						<!-- required 속성은 반드시 입력해야되게 하는 속성 -->
 						<label for="userPassword">PW : </label>
 						<input
 							type="password"
 							id="userPassword"
+							name="userPassword"
 							placeholder="비밀번호를 입력 해주세요"
+							required
 						/>
 					</div>
 
+					<br />
+
 					<div>
 						<label for="searchArea">검색</label>
-						<input type="search" id="searchArea" placeholder="검색어를 입력해 주세요" />
-						<button>검색하기</button>
+						<input
+							type="search"
+							id="searchArea"
+							name="searchArea"
+							placeholder="검색어를 입력해 주세요"
+						/>
+						<!--  -->
+						<datalist> </datalist>
+					</div>
+
+					<br />
+
+					<div>
+						<label for="enmailArea">이메일</label>
+						<input
+							type="email"
+							id="enmailArea"
+							name="enmailArea"
+							placeholder="이메일을 입력해주세요"
+						/>
+					</div>
+
+					<br />
+
+					<div>
+						<!-- label안에 interactive 마크업도 사용하지 말아야한다. -->
+						<label for="userPhone">전화번호</label>
+						<input type="tel" name="userPhone" id="userPhone" required />
+					</div>
+
+					<br />
+
+					<div>
+						<!-- 체크가 가능한 input 속성 -->
+						<label><b>체크박스</b></label>
+						<div>
+							<input
+								type="checkbox"
+								name="classLikelion"
+								id="classHtml"
+								checked
+								value="html"
+							/>
+							<label for="classHtml">HTML</label>
+						</div>
+						<div>
+							<input type="checkbox" name="classLikelion" id="classCss" value="css" />
+							<label for="classCss">CSS</label>
+						</div>
+						<div>
+							<input
+								type="checkbox"
+								name="classLikelion"
+								id="classJs"
+								value="javascript"
+							/>
+							<label for="classJs">JS</label>
+						</div>
+					</div>
+
+					<br />
+
+					<div>
+						<!-- 다중선택이 가능한 input 속성 -->
+						<label><b>Radio</b></label>
+
+						<div>
+							<label for="classRom1">회고1팀</label>
+							<input type="radio" name="classRoom1" id="classRoom1" value="class1" />
+						</div>
+						<div>
+							<label for="classRom2">회고2팀</label>
+							<input type="radio" name="classRoom2" id="classRoom2" value="class2" />
+						</div>
+						<div>
+							<label for="classRom3">회고3팀</label>
+							<input type="radio" name="classRoom3" id="classRoom3" value="class3" />
+						</div>
+					</div>
+
+					<br />
+
+					<div>
+						<input type="submit" value="전송하기" />
+						<button type="submit">전송하는 버튼</button>
 					</div>
 				</fieldset>
 			</form>
