@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>form (select,textarea)요</title>
+		<style>
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border-width: 0;
+			}
+			.hiddenStar {
+				color: tomato;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>form (select,textarea)</h1>
+		<form action="/" method="post">
+			<h2>select</h2>
+			<div>
+				<!-- 리스트를 선택가능한 드롭다운 선택 요소 -->
+				<label for="petSelect">반려동물</label>
+				<select name="petSelect" id="petSelect">
+					<option value="cat">고양이</option>
+					<option value="puppy">강아지</option>
+					<option value="fox">여우</option>
+					<option value="hamster">햄스터</option>
+					<option value="goldfish">금붕어</option>
+					<option value="parrot">패럿</option>
+				</select>
+			</div>
+			<hr />
+			<h2>textarea</h2>
+			<div>
+				<label for="message"
+					>내용 <span aria-hidden="true" class="hiddenStar">*</span>
+					<span class="sr-only">필수</span></label
+				>
+				<br />
+				<!-- 텍스트 영역 -->
+				<textarea
+					name="message"
+					id="message"
+					cols="50"
+					rows="20"
+					placeholder="여기에 의견을 적어주세요"
+					required
+				></textarea>
+			</div>
+		</form>
+	</body>
+</html>

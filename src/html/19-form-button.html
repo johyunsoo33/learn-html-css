@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>form 버튼 요소</title>
+	</head>
+	<body>
+		<h1>form 버튼 요소</h1>
+		<form action="/" method="post" id="buttonForm">
+			<div><label for="userName">사용자 이름</label><input type="text" id="userName" /></div>
+			<div>
+				<label for="userPW">사용자 비밀번호</label><input type="password" id="userPW" />
+			</div>
+
+			<div>
+				<input type="submit" value="전송" />
+				<!-- 같은 폼 그룹안에 있는 모든 내용을 초기화한다. -->
+				<input type="reset" value="초기화" />
+				<input type="button" value="Clike Me!" />
+			</div>
+			<div>
+				<button type="submit">전송</button>
+				<!-- 같은 폼 그룹안에 있는 모든 내용을 초기화한다. -->
+				<button type="reset">초기화</button>
+				<button type="button">클릭!</button>
+			</div>
+
+			<div>
+				<button>
+					<img src="/src/assets/icon/search.svg" alt="검색버튼" aria-label="전송해줘" />
+				</button>
+
+        <button>
+          <svg>
+            
+          </svg>
+        </button>
+			</div>
+		</form>
+
+		<button type="reset" form="buttonForm">초기화</button>
+	</body>
+</html>
