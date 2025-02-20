@@ -1,0 +1,18 @@
+/* font-family 속성 - 글꼴 */
+body {
+	font-family: 'SUIT', sans-serif;
+	font-weight: 400;
+}
+
+h1 {
+	font-weight: 500;
+}
+
+/* font 관련 속성 - 글자 크기, 굵기, 기울임꼴 */
+.size {
+	font-size: 24px;
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1.5;
+	font-variant: small-caps;
+}
