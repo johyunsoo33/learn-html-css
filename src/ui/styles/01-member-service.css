@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* 클래스 선택자 */
+/* 배경색상 */
+/* font-variant 속성으로 대문자 변환은 가능했지만 크기가 작은 대문자인 관계로 주석 처리 */
+/* 검색을 통해 text-transform 속성을 알게되었고 대문자로 변환하는 값을 적용함 */
+/* text-transform 속성을 .member-service에 선언함으로써 자식 요소 모두에 상속되도록 함 */
+.member-service {
+	background-color: yellow;
+	/* font-variant: small-caps; */
+	text-transform: uppercase;
+	font-size: 1.125rem;
+}
+/* 태그 선택자 */
+/* 웹브라우저 스타일(밑줄)을 재정의 */
+/* 웹브라우저 링크 스타일(색상)을 지정의 (상속) */
+.item {
+	text-decoration: none;
+	color: inherit;
+}
+/* a 요소보다 우선순위 */
+.item.first:before {
+	content: '';
+}
+/* a 요소이면서 가상요소 선택자 */
+.item::before {
+	content: ':';
+}
+/* 구조 선택자를 이용할 때 */
+a:nth-child(n + 2)::before {
+	background-color: pink;
+	content: ':';
+}
+
+/* .member-service {
+	background-color: yellow;
+	font-variant: small-caps; 
+	text-transform: capitalize;
+} */
+/* .member-service > a {
+	text-decoration: none;
+	color: inherit;
+	&::after {
+		content: ' : ';
+		text-align: center;
+		justify-content: center;
+	}
+	&:nth-of-type(n + 2) {
+		content: ' | ';
+	}
+	&:last-of-type::after {
+		content: ' ';
+	}
+} */
