@@ -1,18 +1,34 @@
+/* 루트 요소 */
+:root {
+	/* 반응형에 적합하다. */
+	font-size: clamp(12px, 3vw, 24px);
+}
 /* font-family 속성 - 글꼴 */
 body {
 	font-family: 'SUIT', sans-serif;
 	font-weight: 400;
+	/* rem단위는 루트에서 정한 숫자 * 내가 정한 숫자 */
+	/* 14 * 1.5 의 값과 같다. */
+	font-size: 1.25rem;
 }
 
 h1 {
 	font-weight: 500;
+	font-size: 1.4em;
 }
-
+div {
+	/* 부모로부터 상속 */
+	font-size: 1.5em;
+}
 /* font 관련 속성 - 글자 크기, 굵기, 기울임꼴 */
 .size {
-	font-size: 24px;
 	font-weight: 700;
 	font-style: italic;
-	line-height: 1.5;
+	line-height: 1.2;
 	font-variant: small-caps;
+	font-family: 'Pretendard', sans-serif;
+	/* 위에 코드를 한줄로 표기 */
+	/*  font: font-weight font-style font-variant font-size line-height font-family */
+	/* 필수 기입을 해야하는게 있다! */
+	/* line-height는 넘버 단위를 생략할수있다. */
 }
