@@ -1,0 +1,84 @@
+body {
+	background-color: #ffc;
+}
+/* 태그 선택자 */
+p {
+	color: red;
+	/*sass에서 &는 현재 선택자를 가르킨다. */
+
+	&:hover {
+		color: #000;
+	}
+
+    &:focus{
+    border: 10px solid red;
+  }
+}
+/* 위 스타일 코드를 순수 css로 바꿀경우 */
+/* p {
+	color: red;
+}
+p:hover{
+  color: #000;
+} 로 바꿔서 표현하면 된다*/
+
+a {
+	transition: all 0.3s;
+}
+/* 클래스 선택자 */
+/* 클래스 선택자는 클래스명 앞에 .을 먼저 쓴다. */
+.like {
+	color: royalblue;
+}
+/* 아이디 선택자 */
+/* 아이디 선택자는 아이디명 앞에 #을 먼저 쓴다. */
+#lion {
+	color: rebeccapurple;
+}
+
+/* 속성 선택자 */
+/* 속성을 선택할때에는 [] 안에 속성을 넣는다. */
+/* 구체적으로 속성을 선택하기 위해서 태그명[속성]{}으로 작성해준다. */
+p[title] {
+	color: violet;
+}
+a[href="https://github.com/features/copilot"]
+{
+	text-decoration: none;
+}
+a[href$='pdf'] {
+	background-color: aqua;
+}
+
+/* 가상 요소 선택자 */
+h1::after {
+	content: ' | ';
+	justify-content: center;
+	text-align: center;
+}
+h1::before {
+	content: '| ';
+	text-align: center;
+	justify-content: center;
+}
+
+/* 가상 클래스 선택자 */
+a:link {
+	color: black;
+}
+a:visited {
+	color: sienna;
+}
+/* anchor 태그이거나 form요소에서만 적용이 된다. */
+a:hover {
+	color: blue;
+	font-size: 23px;
+	transition: all 0.3s;
+}
+a:focus {
+	background-color: saddlebrown;
+	color: #000;
+}
+a:active {
+	background-color: #fff;
+}
