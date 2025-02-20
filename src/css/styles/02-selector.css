@@ -1,3 +1,4 @@
+@charset "utf-8";
 body {
 	background-color: #ffc;
 }
@@ -10,9 +11,9 @@ p {
 		color: #000;
 	}
 
-    &:focus{
-    border: 10px solid red;
-  }
+	&:focus {
+		border: 10px solid red;
+	}
 }
 /* 위 스타일 코드를 순수 css로 바꿀경우 */
 /* p {

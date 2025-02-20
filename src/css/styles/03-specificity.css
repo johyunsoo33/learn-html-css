@@ -1,0 +1,36 @@
+@charset "utf-8";
+body * {
+	color: olive;
+	border: 1px solid #000;
+	margin: 10px;
+}
+h1 {
+	font-size: 1em;
+}
+
+p {
+	background-color: yellow;
+}
+p {
+	background-color: lime;
+}
+body h2 + p {
+	background-color: yellow;
+}
+section > .ai {
+	background-color: blueviolet;
+}
+/* #ai {
+	background-color: pink;
+} */
+section > .ai.copilot {
+	background-color: violet;
+}
+
+/* 상속받은 값을 쓴다. */
+a {
+	color: inherit;
+	margin: inherit;
+}
+
+/* 상속 과 겹침 우선순위를 다시한번 공부 */
