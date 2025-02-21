@@ -1,1 +1,133 @@
 @charset "utf-8";
+/* BOX model */
+/* 마크업된 언어는 모두 박스형태로 렌더링된다. */
+/* margin , padding , border 등을 가지고있다. */
+
+body {
+	/* 선언블록 */
+	color: #000;
+}
+
+div.like {
+	/* display 속성은 요소를 표현하는방식 */
+	/* display: inline , display:table , display:flex 등 여러방식으로 요소를 표현할수있다. */
+	display: block;
+
+	/* display:inline-block 은 인라인요소인데 블록의 성질도 가지게하는 속성값 */
+}
+h2 {
+	/* display: flow-root를 사용하게 되는경우  BFC(Block Formatting Context)가 생성되기 때문데
+  display:float속성으로 생기는 레이아웃 문제를 해결할수있다. */
+	display: flow-root;
+}
+p {
+	width: 500px;
+	/* 박스 테두리를 설정하는 스타일 속성 border */
+	/* 모든 방향의 박스 테두리의 두께를 5px로한다.(원래 속성은 아니다.) */
+	border-width: 5px;
+
+	/* top bottom left right 따로따로 값을주는게 원래 주어진 속성
+	border-top-width: 5px;
+	border-bottom-width: 3px;
+	border-left-width: 2px;
+	border-right-width: 1px; */
+
+	border-style: double;
+	border-color: grey;
+
+	/* 최종 테두리 속성(모든걸 압축한 내용) */
+	/*border:boder-width , border-style, border-color  */
+	border: 2px dashed #000;
+}
+
+.lionPar {
+	/* 안쪽여백을 부여하는 속성 padding */
+	/* padding과 margin에 경우 브라우저에서 기본으로 제공한다. */
+	/* 우리는 원하는 페이지 제작을 위해 겹침을 이용해서 다시 수정하는것 */
+
+	/* padding : top right bottom left 순이다. */
+	/* padding: 위쪽 여백 20px, 오른쪽 여백 40px, 하단 여백 10px, 왼쪽 여백30px; */
+	padding: 20px 40px 10px 30px;
+	/* border처럼 한번에 주는경우도 있다.  */
+	/* 이경우에는 top right bottom left전부 30px을 준다.  */
+	/* padding:30px */
+
+	line-height: 20px;
+}
+
+.lionWH {
+	border: 1px solid brown;
+	/* 너비와 높이는 블록 요소에서만 가능하다. */
+	/* 인라인 요소는 속성값을 줘도 안바뀐다. */
+	/* 그래서 인라인 요소에는 
+  display: block;  혹은 display: inline-block;이라는 속성을 줘서 너비랑 높이를 설정해야한다. */
+	/* width속성은 요소의 너비를 설정하는 속성 */
+	width: 300px;
+	/* height속성은 요소의 높이를 설정하는 속성 */
+	height: 20px;
+}
+
+.lionInb {
+	border: 1px solid rebeccapurple;
+	display: inline-block;
+	width: 400px;
+	height: 40px;
+	padding: 10px;
+
+	/* 인라인 요소의 내부 높이는 line-height값에 따라 달라진다. */
+	/*  인라인 요소의 높이와 줄 간격을 조정하는 데 사용 */
+	line-height: 40px;
+}
+
+.campMar {
+	width: 300px;
+	/* margin은  */
+	/* margin : top right bottom left 순이다. */
+	/* margin: 위쪽 여백 20px, 오른쪽 여백 40px, 하단 여백 10px, 왼쪽 여백30px; */
+	margin: 20px 40px 70px 30px;
+
+	/* 이경우에는 top right bottom left전부 50px을 준다.  */
+	/* margin: 70px; */
+
+	/* margin: auto는 부모 요소의 크기 내에서 
+  남는 여유 공간(바깥족 여백)을 좌우로 동일하게 나누어,
+  자식 요소가 가로 방향으로 중앙에 정렬되도록 합니다. 
+  이때 전체 영역이 줄어드는 것이 아니라, 
+  콘텐츠 영역 외의 남는 공간을 활용해 
+  시각적으로 가운데에 위치하게 만드는 것입니다. */
+
+	/* margin: auto; */
+}
+
+.campMarCa {
+	/* margin 속성은 */
+	/* 인접한 블록 요소나 부모-자식 관계에서 서로 맞닿는 margin이 겹칠 경우 */
+	/* 두 값이 합쳐지지 않고, 더 큰 값 하나만 적용된다. */
+	/* 이를 마진 상쇄(Margin Collapsing)라고 한다. */
+	/* 무조건 나중에 선언된 값이 우선이 아닌 먼전 선언된 겸쳐진 margin의 값이 클경우
+  작은값은 무시된다.. */
+	/* margin 20px 0 은 top bottom은 20pm left right는 0px*/
+	margin: 50px 0;
+	/* margin 0 20px 은 top bottom은 0pm left right는 20px*/
+	/* margin: 0 20px; */
+}
+/* 박스 사이징 */
+/* 박스의 총 크기는 실제 내용이 있는 영역(콘텐츠 영역) + padding + margin + border까지 모두 더한값 */
+
+.miMar {
+	/* margin 속성에 음수 값을 주면 */
+	/* 원래의 마진 방향으로 콘텐츠 영역이 이동하는 대신 */
+	/* 반대 방향으로 이동하게 된다. */
+	/* 이를 통해 요소가 다른 요소와 겹칠 수 있다. */
+
+	/* margin-left: -40px; → 왼쪽 여백을 40px 없애고, 요소가 오른쪽으로 가까워진다. */
+	/* margin-bottom: -30px; → 아래쪽 여백을 30px 없애고, 요소가 위로 가까워진다. */
+	/* margin-right: -20px; → 오른쪽 여백을 20px 없애고, 요소가 왼쪽으로 가까워진다. */
+	/* margin-top: -60px; → 위쪽 여백을 60px 없애고, 요소가 아래로 가까워진다. */
+	margin-left: -40px;
+	margin-bottom: -30px;
+	margin-right: -20px;
+	margin-top: -60px;
+}
+
+/* CSS Reset */
