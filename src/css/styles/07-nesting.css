@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS 중첩 */
+.likelion {
+	.likelion__list {
+		list-style: none;
+
+		&:hover {
+			background-color: pink;
+		}
+	}
+
+	.likelion__ltem {
+		color: green;
+	}
+
+	.likelion__link {
+		color: red;
+	}
+	/* sass와 다르게 가상효소 혹은 가상클래스만 붙이는것만 가능하지
+   이름을 추가하는것은 안된다. */
+	/* .likelion__list:hover {
+		background-color: pink;
+	} */
+}

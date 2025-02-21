@@ -1,0 +1,56 @@
+@charset "utf=8";
+@import url(/src/common/mini-reset.css);
+h1,
+section {
+	width: 600px;
+}
+/* css position */
+/* margin과 달리 진짜로 요소의 실제 위치를 옮긴는 속성 */
+h2 {
+	/*  박스의 배치 방식을 지정할 수 있는 기본 속성*/
+	/* 위치 조정이 불가능한 기본 위치 지정 속성 */
+	position: static;
+}
+.lion {
+	border: 3px solid #000;
+	/* 부모요소의 높히는 자식요소의 높이에 따라 달라진다 */
+	/* 부모요소의 높히의 기본값은 height:auto */
+	background-color: black;
+
+	.like {
+		border: 3px solid red;
+		background-color: yellow;
+		/* 자기 자신을 기준으로 움직임이 가능한 위치 지정 속성 */
+		/* top . bottom , left . right 속성을 사용해서 이동이 가능하다. */
+		/* 레이어가 다른 레이어 위로 가게 되는 겹치는 현상이 발생함*/
+		/* 쿠션위에 쿠션이 하나더 얹어진것 */
+		position: relative;
+		height: 50px;
+		top: -5px;
+		left: -5px;
+	}
+}
+h4 {
+	background-color: tomato;
+}
+.box {
+	position: relative;
+	border: 1px solid blue;
+	height: 100px;
+	margin-top: 100px;
+}
+.bootCamp {
+	background-color: blanchedalmond;
+	/* posiiton:absolute 와 blockLfixed은 BFC가 일어나서 
+  display:bolck한거와 같은 속성이 되버린다. */
+	/*posiiton:absolute는 부모요소 나 기준 요소를 기준으로 배치가 된다.*/
+
+	/* 가장 가까운 **position이 
+  relative, absolute, fixed, sticky로 설정된 부모 요소를 
+  기준으로 위치가 설정됩니다. */
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	top: 20%;
+}
