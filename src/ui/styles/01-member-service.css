@@ -8,14 +8,18 @@
 	background-color: yellow;
 	/* font-variant: small-caps; */
 	text-transform: uppercase;
-	font-size: 1.125rem;
+	line-height: 1.5;
+	font-size: 0;
 }
 /* 태그 선택자 */
 /* 웹브라우저 스타일(밑줄)을 재정의 */
 /* 웹브라우저 링크 스타일(색상)을 지정의 (상속) */
 .item {
+	font-size: 0.875rem;
 	text-decoration: none;
 	color: inherit;
+	text-align: center;
+	background-color: pink;
 }
 /* a 요소보다 우선순위 */
 .item.first:before {
@@ -24,9 +28,14 @@
 /* a 요소이면서 가상요소 선택자 */
 .item::before {
 	content: ':';
+	justify-content: center;
+	text-align: center;
+	padding-right: 8px;
+	padding-left: 8px;
+	margin: 0 8px 0 8px;
 }
 /* 구조 선택자를 이용할 때 */
-a:nth-child(n + 2)::before {
+.item:nth-child(n + 2)::before {
 	background-color: pink;
 	content: ':';
 }
@@ -51,3 +60,31 @@ a:nth-child(n + 2)::before {
 		content: ' ';
 	}
 } */
+
+.memberLink {
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		font-size: 0.875rem;
+		background-color: yellowgreen;
+		text-align: center;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			font-size: 0.875rem;
+			color: inherit;
+			text-align: center;
+			background-color: pink;
+			padding: 8px;
+		}
+		span {
+			display: inline-block;
+			background-color: aqua;
+			margin: 0 8px 0 8px;
+			line-height: 1.5;
+		}
+	}
+}
