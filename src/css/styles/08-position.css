@@ -41,7 +41,7 @@ h4 {
 }
 .bootCamp {
 	background-color: blanchedalmond;
-	/* posiiton:absolute 와 blockLfixed은 BFC가 일어나서 
+	/* posiiton:absolute 와 block:fixed은 BFC가 일어나서 
   display:bolck한거와 같은 속성이 되버린다. */
 	/*posiiton:absolute는 부모요소 나 기준 요소를 기준으로 배치가 된다.*/
 
