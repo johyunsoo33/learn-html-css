@@ -10,11 +10,7 @@
 	initial-value: orange;
 }
 
-@property --display-rule {
-	syntax: '<display>';
-	inherits: true;
-	initial-value: 'block';
-}
+
 /* css 변수(custom properties) */
 /* 전역 변수 정의 */
 /* html{} 과 :root{}는 같다. */

@@ -47,6 +47,7 @@ p {
 
 	/* padding : top right bottom left 순이다. */
 	/* padding: 위쪽 여백 20px, 오른쪽 여백 40px, 하단 여백 10px, 왼쪽 여백30px; */
+	/* 아래와 같이 구현하는것을 숏핸드 구성이라고 한다.(단축 표기법) */
 	padding: 20px 40px 10px 30px;
 	/* border처럼 한번에 주는경우도 있다.  */
 	/* 이경우에는 top right bottom left전부 30px을 준다.  */
@@ -113,8 +114,8 @@ p {
 	/* margin: 0 20px; */
 }
 /* 박스 사이징 */
-/* 박스의 총 크기는 실제 내용이 있는 영역(콘텐츠 영역) + padding + margin + border까지 모두 더한값 */
-
+/* 	box-sizing:border box 박스의 총 크기는 실제 내용이 있는 영역(콘텐츠 영역) + padding + margin + border까지 모두 더한값 */
+/* box-sizing: 의 기본값은 content-box로써 width와height값만 크기로 친다. */
 .miMar {
 	/* margin 속성에 음수 값을 주면 */
 	/* 원래의 마진 방향으로 콘텐츠 영역이 이동하는 대신 */

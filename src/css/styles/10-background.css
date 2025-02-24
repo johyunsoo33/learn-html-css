@@ -1,0 +1,38 @@
+@charset "utf=8";
+body {
+	/* hsl(hue(색상) , Saturation(채도) , Lightness(명도))*/
+	background-color: hsl(180, 50%, 80%);
+	/* img테그는 이미지 크기는 고정되고 한개씩만 고정적으로 나오지만
+   background-image는 이미지크기를 고정으로 하고
+    배경으로 주어진 크기만큼 사진을 반복해서 출력한다, */
+	background-image: url(/src/assets/images/rabbit.png);
+	/* 배경이미지 반복 여부  */
+	background-repeat: no-repeat;
+	/* 배경 이미지 위치 */
+	/* background-position: x  y(단축 표기법) */
+	background-position: 50% 50%;
+	/* 배경이미지를 고정시켜놓는것 */
+	/* 기본값은 scroll */
+	background-attachment: fixed;
+	/* 배경이미지 크기 조절 */
+	background-size: 12.25rem 12.25rem;
+	/* 백그라운드 이미지를 설정하는데 쓰이는 속성은  
+  background-image로 이미지 경로,backgruond-repeat로 배경 이미지 반복여부,
+  background-position으로 배경 이미지 위치 설정 , background-size로 배경 이미지 크기 설정이 쓰인다.
+  */
+	/* 단축 표기법으로 선언 */
+	background:
+	/*배경에서는 이미지가 겹치는 경우 먼저 쓰인게 위로 올라온다. */
+		url(/src/assets/images/cloud.png) no-repeat 50% 50% fixed,
+		url(/src/assets/images/sun.png) no-repeat 50% 60%/9.375rem 9.375rem fixed,
+		/* 그라이디언트 효과 */ linear-gradient(red, green),
+		yellow;
+}
+div {
+	border: 1px solid #000;
+}
+.backImg {
+	width: 100%;
+	height: 100%;
+	background: url(/src/assets/images/coffee.png) no-repeat center;
+}
