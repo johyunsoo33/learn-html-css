@@ -1,0 +1,143 @@
+@charset "utf=8";
+/* @property 는 새로운 CSS 사용자 정의 속성을 선언할 때 사용한다. */
+/* @property --text-color에서 --text-color는 변수명  */
+/* syntax는 	이 속성이 받을 수 있는 값의 자료형  여기선 color*/
+/* syntax는 이 속성이 받을 수 있는 값의 자료형 */
+/* initial-value	변수의 초기값 */
+@property --text-color {
+	syntax: '<color>';
+	inherits: false;
+	initial-value: orange;
+}
+
+@property --display-rule {
+	syntax: '<display>';
+	inherits: true;
+	initial-value: 'block';
+}
+/* css 변수(custom properties) */
+/* 전역 변수 정의 */
+/* html{} 과 :root{}는 같다. */
+
+/*RRGGBB에서 알아야할것은 16X16 은 256이므로 RGB를 256색이라고 말한다.*/
+/*R 16 G 16 B 16이므로 RR해서 256 GG해서 256 BB해서 256 이 나오므로*/
+/* RGB색상 표를 보면 whtie는 RBG(255 ,255,255)처럼 나타낸다. */
+:root {
+	/* --를 선언함으로써 내가 만든 변수라는걸 의미하게 만든다. */
+	--primary-color: #3498db;
+	--secondary-color: #2ecc71;
+
+	/* 전역변수와 지역변수의 활용을 위한 변수 */
+	/* 색상 팔레트 */
+	--white: #fff;
+	--black: #000;
+	--red: #f00;
+	--green: #0f0;
+	--blue: #00f;
+	--orange: orange;
+	--yellow: yellow;
+	--light-blue: aqua;
+
+	/* size */
+	--small: 0.75rem;
+	--medium: 0.875rem;
+	--default: 1rem;
+	--large: 1.125rem;
+
+	/* 주요 색상 */
+	--primary-color: var(--light-blue);
+	--secondary-color: var(--orange);
+	--accent-color: var(--yellow);
+	--border-color: var(--red);
+}
+
+h2 {
+	/* CSS 변수는 var() 함수를 사용해서 호출해야 한다. */
+	/* 그냥 --primary-color라고 하면 변수인지를 파악할수 없기 때문에 */
+	/* var()함수안에 변수명인 --primary-color를 넣음으로써 */
+	/* --primary-color 변수명을 가진 변수를 사용한다고 말해줘야한다. */
+	background-color: var(--primary-color);
+}
+div.primaryTest {
+	--bg-color: var(--green);
+	--border-color: var(--red);
+	p {
+		/* 변수명을 선언했는데 해당 변수명을 가진 변수가 없을 경우  */
+		/* var(--secondary-color , #2ecc71)와 같이 ,를 뒤에 쓰고 값을 입력하면 해당변수명이 없을경우 */
+		/* 두 번째 인자로 입력된 기본값(#183a55)이 대신 적용된다. (fallback 기능) */
+		/* 첫 번째로 참조한 변수가 정의되지 않았을 때 대체(fallback) 값으로 사용됩니다. */
+		/* 그 뒤에오는 값을 콜백해서 나타나게 한다. */
+		color: var(--secondary, #580707);
+	}
+}
+
+div.secondaryTest {
+	/* 변수가 중복 선언되면, 가장 나중에 선언된 값이 우선 적용된다. */
+	/* 전역변수보단 지역변수의 우선순위가 높다. */
+	--secondary-color: #0d007e;
+	/* 지역변수 와 전역 변수의 응용*/
+	/* 지역변수안에 전역변수를 넣는방법 */
+	--bg-color: var(--green);
+	--border-color: var(--red);
+	.textCard1 {
+		/* 이 .textCard1는 div.secondaryTest 내에서 정의된 지역 변수의 영향을 받는다. */
+		/* 이 .textCard1는 전역변수에 있는 --bg-color와 --border-color 변수를 사용하는데 */
+		/* -bg-color와 --border-color 변수의 색상은 현재 전역변수에서 선언 한 색상에 관련한 변수를 담고있다. */
+		background-color: var(--bg-color);
+		border: 5px solid var(--border-color);
+	}
+	.textCard2 {
+		/* 지역변수 와 전역 변수의 응용2*/
+		/* 이 .textCard2는 div.secondaryTest 내에서 정의된 지역 변수의 영향을 받는다. */
+		/* 이 .textCard2는 전역변수에 있는 --bg-color와 --border-color 변수를 사용하는데 */
+		/* -bg-color와 --border-color 변수의 색상은 현재 전역변수에서 선언 한 색상에 관련한 변수를 담고있다. */
+		--bg-color: var(--white);
+		--border-color: var(--blue);
+		background-color: var(--bg-color);
+		border: 5px solid var(--border-color);
+	}
+}
+.wrapper {
+	button {
+		background-color: var(--bg-color, #fff);
+		font-size: var(--font-size, 1rem);
+		color: var(--text-color, #000);
+	}
+	button.openBtn {
+		--font-size: var(--small);
+		--text-color: var(--red);
+		--bg-color: var(--green);
+	}
+	button.closeBtn {
+		--font-size: var(--default);
+	}
+	button.popupBtn {
+		--font-size: var(--medium);
+		--text-color: var(--green);
+	}
+	button.infoBtn {
+		--font-size: var(--large);
+	}
+}
+
+.container {
+	background-color: var(--bg-color, #fff);
+	font-size: var(--font-size, 1rem);
+	color: var(--text-color, #000);
+	border: 2px dashed var(--border-color);
+
+	.parents {
+		border: inherit;
+		color: var(--light-blue, #000);
+
+		.child {
+			color: var(--text-color);
+			display: var(--display-rule);
+		}
+	}
+}
+/* 속성 중 기본적으로 상속이 되는데 상속을 받고 싶지 않으면 다시 지정하면 됩니다.
+속성 중 기본적으로 상속이 되지 않는데 상속을 하고 싶다면 inherit라는 전역값을 사용하면 됩니다.
+
+그리고 마지막에 설명드린 건 CSS변수를 @property 규칙으로 선언할 때 기본 적인 상속 여부를 결정해 줄 수 있다라고 생각하시면 됩니다. 
+ */
