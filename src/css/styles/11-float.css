@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import url(/src/common/theme.css);
+
+/* .mom-friend-son {
+	display: none;
+} */
+
+/* float 사용하기 */
+.card {
+	background: var(--pastel-pink);
+	border: 1px solid green;
+
+	.thumbnail {
+		background: var(--pastel-yellow);
+		/* float요소의 부모에 직접 높이을 지정해서
+     일반 흐름을 벗어난 이미지가 다음 콘텐츠 영역 레이아웃에 영향을 주는것을 피할수 있음   */
+		/* height: 8.75rem; */
+
+		/* 넘치는 콘텐츠를 잘라내기 위해 사용되는데  float의 문제를 해결하기 위해서도 사용된다.*/
+		/* overflow: hidden;을 부모 요소에 설정하면 
+		브라우저가 부모 요소의 높이를 자동으로 계산하도록 강제합니다.
+		 내부적으로 새로운 **Block Formatting Context (BFC)**를 생성해서 
+		 플로팅된 요소들의 높이도 계산에 포함시키게 됩니다. */
+
+		/* overflow: hidden;이 단순히 넘치는 요소만 숨기는 게 아니라, 
+		**새로운 Block Formatting Context (BFC)**를 생성하기 때문이에요. */
+
+		/* 
+		BFC란?
+		CSS에서 레이아웃을 관리하는 독립적인 컨텍스트입니다.
+		BFC 안에서의 요소들은 외부 요소의 영향을 받지 않고,
+		 내부 요소들의 배치 규칙이 독립적으로 적용돼요.
+		*/
+		/* overflow: hidden; */
+
+		/* float으로 인해 부모 요소인.thumbnail이 인식하지 못하는 높이를 
+		포함하다록 BFC를 생성하도록 해주는 display를 이용한 방법  */
+		/*  CSS에서 플로우 컨텍스트를 만드는 데 사용되는 속성 */
+		/* **플로우 컨텍스트 (Flow Context)**는 
+		웹 페이지에서 요소들이 배치되는 방식을 정의하는 중요한 개념 */
+		display: flow-root;
+
+		/* float으로 인해 부모 요소인.thumbnail이 인식하지 못하는 높이를 
+		포함하다록 BFC를 생성하도록 해주기 위해 부모 요소에 다시 float속성을 이용한 방법  */
+		float: left;
+
+		img {
+			width: 6.25rem;
+			/* vertical-align: top; 이미지 아래쪽 여백을 없애기 위한 트릭 */
+			/*  인라인 요소나 테이블 셀 내에서만 요소의 수직 정렬을 제어하는 CSS 속성 */
+			/* vertical-align의 기본값은 baseline */
+			/* 
+      middle: 요소를 수직 중앙에 정렬
+      bottom: 요소를 컨테이너의 맨 아래에 정렬
+      sub, super: 아래 첨자, 위 첨자처럼 정렬
+      */
+			vertical-align: top;
+
+			/* display:block; 이미지 아래쪽 여백을 없애기 위한 트릭 */
+			/* display: block; */
+
+			/* float 속성은 일반적인 흐름에서 분리된 요소를
+			 부모 요소 라인박스의 왼쪽이나 오른쪽에 배치합니다. 
+			 이렇게 지정된 요소는 다른 요소의 배치에 영향을 끼칩니다. */
+			/* float: left;는 요소를 왼쪽에 float: right;는 오른쪽에
+			  float:none는 기본값으로 float속성을 적용하지 않음 */
+			float: left;
+
+			/* position: relative;
+			left: -40px;
+			top: -50px; */
+
+			/* float으로 인해 부모 요소인.thumbnail이 인식하지 못하는 높이를 
+		포함하다록 BFC를 생성하도록 해주기 위해 width 속성을 이용한 방법  */
+			width: 100%;
+		}
+	}
+
+	.subject {
+		background: var(--pastel-blue);
+	}
+
+	.content {
+		/* float 효과를 헤제하기위해 clear속성을 사용할수있다. */
+		/* 요소가 양쪽(left와 right)에서 떠 있는(floating) 요소들의 영향을 받지 않도록 합니다 */
+		/* 
+    다른 옵션들:
+    clear: left;: 왼쪽으로 떠 있는 요소의 영향을 받지 않음.
+    clear: right;: 오른쪽으로 떠 있는 요소의 영향을 받지 않음.
+    clear: none;: 기본값, 떠 있는 요소의 영향을 받음
+    */
+		/* block속성에만 적용이 된다. */
+		clear: both;
+
+		background: var(--pastel-orange);
+	}
+}
