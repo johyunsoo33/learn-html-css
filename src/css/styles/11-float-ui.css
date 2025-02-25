@@ -6,6 +6,7 @@ body {
 }
 
 .card2 {
+	visibility: hidden;
 	/* BFC - display:flow-root; overflow:hidden; float:absolute; float:left */
 	border: 1px solid var(--pastel-gray);
 	/* background: var(--pastel-pink); */
@@ -58,5 +59,6 @@ body {
 	}
 
 	.content {
+		font-size: inherit;
 	}
 }

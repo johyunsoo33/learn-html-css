@@ -36,8 +36,6 @@
 		/* float으로 인해 부모 요소인.thumbnail이 인식하지 못하는 높이를 
 		포함하다록 BFC를 생성하도록 해주는 display를 이용한 방법  */
 		/*  CSS에서 플로우 컨텍스트를 만드는 데 사용되는 속성 */
-		/* **플로우 컨텍스트 (Flow Context)**는 
-		웹 페이지에서 요소들이 배치되는 방식을 정의하는 중요한 개념 */
 		display: flow-root;
 
 		/* float으로 인해 부모 요소인.thumbnail이 인식하지 못하는 높이를 

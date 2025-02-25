@@ -1,0 +1,22 @@
+@charset "utf-8";
+body *,
+body *::after,
+body *::before {
+	font-family: 'SUIT', sans-serif;
+	box-sizing: border-box;
+}
+.member-service {
+	background: yellow;
+	display: flow-root;
+
+	a {
+		/* background: lime; */
+		float: left;
+		text-transform: uppercase;
+	}
+
+	a:nth-child(n + 2)::before {
+		content: '|';
+		margin: 0 0.5em;
+	}
+}

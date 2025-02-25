@@ -1,0 +1,65 @@
+@charset "utf=8";
+@import url(/src/common/mini-reset.css);
+:root {
+	--font-size18: 1.125rem;
+	--font-size14: 0.875rem;
+	--font-size11: 0.6875rem;
+	--green: #22be61;
+	--orange: #929b90;
+	--border-color: #d1d1d1;
+	--bg-color: #fff;
+	--spacing-10: 0.625rem;
+	--spacing-20: 1.25rem;
+	--spacing-70: 4.375rem;
+}
+body {
+	margin: 50px;
+	font-family: 'SUIT', sans-serif;
+}
+
+h1 {
+	margin-bottom: 50px;
+}
+
+.notification2 {
+	--border-color: var(--silver);
+	--text-color: var(--silver);
+	--base-spacing: var(--spacing-20);
+	--large-spacing: var(--spacing-70);
+	--base-gap: var(--spacing-10);
+
+	position: relative;
+	border: 1px solid var(--border-color);
+	border-radius: 0.5rem;
+	background: url(/src/assets/svg/pot.svg) no-repeat var(--base-spacing) 50%;
+	padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
+
+	.notification2-subject {
+		font-size: var(--large);
+	}
+
+	.notification2-time {
+		font-size: var(--small);
+		color: var(--green);
+		position: absolute;
+		top: var(--base-spacing);
+		right: var(--base-spacing);
+	}
+
+	.notification2-content {
+		font-size: var(--medium);
+		margin-top: var(--base-gap);
+	}
+
+	&.green {
+		.notification-subject {
+			color: var(--green);
+		}
+	}
+
+	&.brown {
+		.notification-subject {
+			color: var(--brown);
+		}
+	}
+}
