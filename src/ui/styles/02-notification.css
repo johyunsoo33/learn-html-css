@@ -183,3 +183,47 @@ h1 {
 		right: 0.4219rem;
 	}
 }
+
+.netfilx {
+	box-sizing: border-box;
+	background-color: #000;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 20px;
+	display: flow-root;
+
+	input {
+		margin-top: 1.5rem;
+		width: 15.3125rem;
+		margin-bottom: 12px;
+		padding: 10px 20px 9px 20px;
+		border-radius: 30px;
+		background: var(--White, #fff);
+		border: #e2e2e2;
+		font-family: 'SpoqaHanSans';
+		&:focus {
+			outline: 3px solid red;
+		}
+	}
+
+	button {
+		color: #fff;
+		display: block;
+		border-radius: 30px;
+		background: var(--Red-500, #e50914);
+		padding: 0.9375rem 1.25rem;
+		margin: 0 auto;
+		line-height: 1.5;
+		border: none;
+		font-family: 'SpoqaHanSans';
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: -0.007px;
+		svg {
+			position: relative;
+			top: 3px;
+			margin-left: 10px;
+		}
+	}
+}
