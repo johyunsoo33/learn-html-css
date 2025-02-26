@@ -1,11 +1,16 @@
 {
-  "scripts": {
-    "start": "live-server . --port=3000 --host=localhost --no-browser",
-    "format": "prettier . --check",
-    "write": "npx prettier --write . --ignore-path .gitignore"
-  },
-  "devDependencies": {
-    "live-server": "^1.2.2",
-    "prettier": "^3.5.0"
-  }
+	"scripts": {
+		"start": "live-server . --port=3000 --host=localhost --no-browser",
+		"format": "prettier . --check",
+		"write": "npx prettier --write . --ignore-path .gitignore",
+		"webp": "simple-webp-converter"
+	},
+	"simple-webp-converter": {
+		"src": "src/assets/face/*.{png,jpg}"
+	},
+	"devDependencies": {
+		"live-server": "^1.2.2",
+		"prettier": "^3.5.0",
+		"simple-webp-converter": "^1.0.3"
+	}
 }
