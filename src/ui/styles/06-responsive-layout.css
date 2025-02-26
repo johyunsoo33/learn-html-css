@@ -1,0 +1,67 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+
+/* 반응형 레이아웃 */
+/* 헤더 */
+.header {
+	background: var(--pastel-coral);
+	height: 15vh;
+}
+/* 네비게이션 , 메인 콘텐츠 , 사이드바 컨테이너 */
+.navConetentWrapeper {
+	display: flow-root;
+	width: 100%;
+
+	/* 내비게이션 */
+	.navigation {
+		background: var(--pastel-green);
+		height: 20vh;
+		@media (min-width: 64rem) {
+			width: 30%;
+			height: 80vh;
+			float: left;
+		}
+	}
+}
+
+/* 메인 콘텐츠 및 사이드바 컨테이너 */
+.contentWrapper {
+	@media (min-width: 48rem) {
+		display: flow-root;
+	}
+	/* 메인 콘텐츠 */
+	.content {
+		background: var(--pastel-aqua);
+		height: 30vh;
+		@media (min-width: 48rem) {
+			float: left;
+			height: 50vh;
+			width: 50%;
+		}
+		@media (min-width: 64rem) {
+			width: 60%;
+			height: 80vh;
+		}
+	}
+
+	/* 사이드 바 */
+	.sidebar {
+		background: var(--pastel-yellow);
+		height: 20vh;
+		@media (min-width: 48rem) {
+			float: right;
+			height: 50vh;
+			width: 50%;
+		}
+		@media (min-width: 64rem) {
+			width: 40%;
+			height: 80vh;
+		}
+	}
+}
+
+/* 푸터 */
+.footer {
+	background: var(--pastel-lavender);
+	height: 15vh;
+}

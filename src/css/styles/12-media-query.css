@@ -1,5 +1,20 @@
 @charset "utf-8";
 
 body {
-	background: yellow;
+	background: blue;
+	font-size: 3vw;
+	/* clamp() 함수를 이용해서 최소값 , 기준값, 최대값을 설정할수있다.*/
+	font-size: clamp(1rem, 2vw + 11.52px, 3rem);
+
+	/* 엣룰 이라고 부른다~ */
+	@media (min-width: 600px) {
+		background-color: pink;
+		/* font-size: 2rem; */
+	}
+
+	/* 가로보기 모드가 적용 되었을때 */
+	@media (orientation: landscape) {
+		background-color: orange;
+		/* font-size: 3rem; */
+	}
 }
