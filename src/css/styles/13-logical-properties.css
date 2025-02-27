@@ -1,0 +1,56 @@
+@charset "utf-8";
+.case-01 {
+	border: 1px solid currentColor;
+	color: green;
+	width: 200px;
+
+	/* 논리 속성이란? */
+	/* 물리적 속성을 대신하여서 쓸수있는 속성 */
+
+	/* 가로 크기를 width 속성이 아닌 논리 속성으로 지정 */
+	inline-size: 400px;
+	/* 세로 크기를 height 속성이 아닌 논리 속성으로 지정 */
+	block-size: 100px;
+	overflow: auto;
+
+	/* 논리단위로 padding과margin을 준 케이스 */
+	padding-inline: 10px;
+	padding-block: 10px;
+	margin-inline: 20px;
+	margin-block: 20px;
+
+	/* 요소의 크기에 따라 유동적으로 주는 방향이 변한다. */
+	/* padding-left와 일반적으로는 같으나 요소가 세로방향이 되었을때는 padding-top으로 변하게 된다  */
+	padding-inline-start: 30px;
+	padding-inline-end: 40px;
+
+	/* 글이 써지는 방향을 조정하는 속성 */
+	/* writing-mode: horizontal-tb; 일반적인 글쓰기 방향*/
+	/* writing-mode: vertical-rl; 세로방향으로 작성하는데 오른쪽에서 왼쪽으로*/
+	/* writing-mode: vertical-lr; 세로방향으로 작성하는데 왼쪽에서 오른쪽으로*/
+	/* writing-mode: sideways-rl;*/
+	/* writing-mode: sideways-lr; */
+	writing-mode: horizontal-tb;
+
+	/* position의 offset을 지정할 때 논리 속성을 사용한 경우 */
+	.inset {
+		position: absolute; /* 변경 없음 */
+		inset-block-start: 0; /* top: 0; */
+		inset-inline-start: 0; /* left: 0; */
+		inset-inline-end: 0; /* right: 0; */
+		inset-block-end: 0; /* bottom: 0; */
+	}
+
+	/* position의 offset을 지정할 때 논리 속성 중 단축 표기법을 사용한 경우 */
+	.inset {
+		position: absolute; /* 변경 없음 */
+		inset: 0;
+	}
+
+	.float {
+		/* float: left 속성을 논리 속성으로 지정 */
+		float: inline-start;
+		/* float: right 속성을 논리 속성으로 지정 */
+		float: inline-end;
+	}
+}

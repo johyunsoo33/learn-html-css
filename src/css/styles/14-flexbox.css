@@ -1,0 +1,142 @@
+@charset "utf-8";
+@import url(/src/common/theme.css);
+body *,
+body *::after,
+body *::before {
+	box-sizing: border-box;
+	font-family: 'SUIT', sans-serif;
+}
+
+/* flex 사용하기 */
+
+/*플렉스 컨테이너 관련 속성*/
+.case-01 {
+	margin-block-end: 300px;
+	display: flex;
+	/* flex-direction:row x축 방향으로 나열 */
+	/* flex-direction:row-reverse x축 방향으로 나열하는데 역순 */
+	/* flex-direction:column; y축 방향으로 나열 */
+	/* flex-direction:column-reverse y축 방향으로 나열 하는데 역순 */
+	/* flex-direction: row-reverse; */
+
+	/* flex-wrap: nowrap; 기본값 줄바꿈이 없음 */
+	/* flex-wrap: wrap; 공간이 부족하면 자동으로 다음 줄로 넘어감 */
+	/* flex-wrap: wrap-reverse; wrap과 동일하지만, 줄이 반대 방향으로 배치됨 */
+	/* flex-wrap: wrap; */
+
+	/* flex-direction 속성과 flex-wrap 속성을 단축해서 표기하는 속성  */
+	/* flex-flow: row wrap; */
+
+	/* align-itmes */
+	/* 현재 줄의 교차 축을 따라 flex 항목이 배치되는 방식을 정하는 속성*/
+	/* align-items: center; */
+
+	/* justify-content: flex-end; */
+	/* justify-content: end;  justify-content: flex-end;와 기능상 같다.*/
+	/* justify-content: flex-start; */
+	/* justify-content: space-between; */
+	/* justify-content: center; */
+
+	/* 영역이 가득차서 줄바꿈이 일어날때
+   공간이 줄바꿈이 일어난 행마다 공간을 분리하고 */
+	/* 각공간 안에서 정렬한다. */
+	/*  속성은 모든 직계 자식에 대해 align-self값을 그룹으로 설정합니다.
+   플렉스박스의 교차축을 따라 아이템을 정렬합니다.  */
+	/* align-items: center; */
+
+	/* lign-content 속성은 콘텐츠 사이와 콘텐츠 주위 빈 공간을 
+  플렉스 박스'의 교차축 또는 그리드의 블록 축을 따라 
+  배치하는 방식을 결정합니다.  */
+	/* align-content: center; */
+	border: 1px solid red;
+
+	/* padding: 10px; */
+	inline-size: 622px;
+	block-size: 522px;
+
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	/* gap */
+	/* row-gap, column-gap을 함께 지장할 수 있는 단축 속성 */
+	/* gap: 20px 40px; */
+	column-gap: 40px;
+
+	[class*='item'] {
+		/* margin-block: 10px;
+		margin-inline-start: 10px; */
+		background-color: var(--pastel-yellow);
+		/* inline-size: 100px;
+		block-size: 100px; */
+		text-align: center;
+		/*  */
+		/* align-content: center; */
+		border: 1px solid red;
+		/* 기존 세로기준 가운데 정령을 지원하지 않을 때 사용하던 트릭 */
+		/* line-height: 100px; */
+	}
+
+	.item1 {
+		/* inline-size: 200px; */
+		font-size: 48px;
+	}
+	.item2 {
+		/* inline-size: 300px; */
+		font-size: 30px;
+	}
+}
+
+/*플렉스 아이템 관련 속성*/
+.case-02 {
+	border: 1px solid red;
+	inline-size: 502px;
+	display: flex;
+	flex-flow: row nowrap;
+
+	[class^='item'] {
+		border: 1px solid currentColor;
+		/* width: 100px;
+		inline-size: 100px;
+		block-size: 100px;
+		height: 100px; */
+		text-align: center;
+		align-content: center;
+
+		/* 플렉스 아이템의 초기 크기를 지정해주는 속성 */
+		/* flex-basis: auto; */
+		/* flex-basis: 100px; auto가 아닌 다른값을 주면 
+    flex-basis: 다른값;을 우선 적용한다.  */
+		/* flex-basis: 100px; */
+		/* 컨텐츠의 내용만큼만 크기를 가진다. */
+		/* flex-basis: content; */
+		/* flex-basis: 200px; */
+
+		/* flex-grow: ;남은 여백의 크기만큼 요소에 할당해서 확대시키는 기능 */
+		/* 숫자가 커지게 되는경우 모두 숫자만큼 들어가는게 아닌 전체 크기에 맞춰서 
+    유동적으로 할당하게 된다 */
+		/* flex-grow: 2; */
+		/* flex-grow: 1; */
+
+		/*  flex-shrink: ; 초과한 내용만큼 요소에서 제거함으로써 축소하는기능*/
+		/* 기본값이 1 */
+		/* flex-shrink: 1; */
+
+		/* 단축 */
+		/* flex: flex-grow,flex-shrink,flex-basis */
+		flex: 0 1 150px;
+	}
+
+	.item4 {
+		/* 테그가 가진 기본값은 order:0  이다. */
+		/* -를 주게 되면서 강제로 앞에 오게할수있다. */
+		order: 0;
+	}
+	.item3 {
+		order: 2;
+	}
+
+	div:nth-child(even) {
+		order: -1;
+	}
+}

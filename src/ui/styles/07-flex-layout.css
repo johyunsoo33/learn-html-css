@@ -1,0 +1,92 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+/* 플렉스를 활용한 반응형 레이아웃 */
+
+/* 반응형 레이아웃 */
+.container {
+	@media (min-width: 768px) {
+		display: flex;
+		flex-flow: row wrap;
+
+		.header,
+		.navigation,
+		.footer {
+			flex-basis: 100%;
+		}
+		.content,
+		.sidebar {
+			flex-basis: 50%;
+			block-size: 65vh;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		display: flex;
+		flex-flow: row wrap;
+
+		.header,
+		.footer {
+			flex-basis: 100%;
+		}
+		.navigation,
+		.content,
+		.sidebar {
+			flex-basis: 0;
+			flex-grow: 1;
+			flex-shrink: 1;
+			block-size: 80vh;
+		}
+	}
+}
+/* 헤더 */
+.header {
+	background: var(--pastel-coral);
+	height: 10vh;
+}
+
+/* 내비게이션 */
+.navigation {
+	background: var(--pastel-green);
+	height: 15vh;
+}
+/* 이건 내가 설계해놓은 flex 레이아웃이 새로운 공간이 추가되어서 무너졌을때 사용하면 좋다.*/
+
+.wrapper {
+	/* CSS에서 요소의 컨테이너 역할을 제거하고, 
+  해당 요소의 자식들이 부모의 레이아웃 컨텍스트를 
+  직접 상속하도록 만드는 속성값 */
+	/* 박스 모델이 사라지고, 자식 요소들이 부모의 레이아웃에 직접 포함됩니다. */
+	/* 해당 요소는 마치 존재하지 않는 것처럼 동작하지만,
+   자식 요소들은 여전히 DOM에 남아 있습니다. */
+	display: contents;
+}
+/* 묵었을때 사용 */
+/* .mainContainer {
+	@media (min-width: 768px) {
+		display: flex;
+
+		.content,
+		.sidebar {
+			block-size: 65vh;
+			flex: 1 0 0;
+		}
+	}
+} */
+
+/* 메인 콘텐츠 */
+.content {
+	background: var(--pastel-aqua);
+	height: 40vh;
+}
+
+/* 사이드 바 */
+.sidebar {
+	background: var(--pastel-yellow);
+	height: 25vh;
+}
+
+/* 푸터 */
+.footer {
+	background: var(--pastel-lavender);
+	height: 10vh;
+}
