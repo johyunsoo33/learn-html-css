@@ -1,0 +1,15 @@
+/* body 스타일 */
+body {
+	font-family: 'SUIT', sans-serif;
+	color: #121212;
+	background-color: #fff;
+	line-height: 1.15;
+	font-weight: 300;
+
+}
+
+/* a 스타일 */
+a {
+	color: inherit;
+	text-decoration: none;
+}
