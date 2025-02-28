@@ -48,7 +48,7 @@
 	--state-offline: #dbdbdb;
 	--state-border: #ffffff;
 
-	position: relative;
+	position: static;
 	background-color: transparent;
 	border: none;
 	padding: 0;

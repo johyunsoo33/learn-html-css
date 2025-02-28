@@ -1,0 +1,74 @@
+@charset "utf=8";
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+@import '/src/ui/components/avatar/avatar.css';
+body {
+	margin: 50px;
+}
+h1 {
+	margin-block: 20px;
+}
+/* Stacking context */
+/* case1 */
+.case-01 {
+	background-color: yellow;
+	display: flex;
+	/* flex-flow: row wrap; */
+	/* gap: 1.25rem; */
+
+	.btnAvatar {
+		/* margin-inline-end: 1.25rem; */
+		margin-inline-end: -20px;
+		position: relative;
+		filter: blur(2px);
+		/*	animation: all 0.4s; */
+		transition: rotate 5s;
+
+		&:hover,
+		&:focus {
+			/* Stacking context 는 html요소가 화면상에서 z축 기준츠로 쌓이는 순서를 결정하는 개념 */
+			/* 웹 페이지에서 요소들이 겹칠 때, 어떤 요소가 다른 요소 위에 표시될지를 결정하는 역할 */
+			z-index: 2;
+			transform: scale(1.2) translate(0, -20px);
+			/* opacity: 0.9; */
+			rotate: 3turn;
+			filter: sepia(60%);
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+/* Transition */
+/* case2 */
+.case-02 {
+	margin-block-start: 20px;
+	display: flex;
+	gap: 20px;
+
+	[class^='area'] {
+		inline-size: 100px;
+		block-size: 100px;
+		border: 1px solid currentColor;
+		text-align: center;
+		align-content: center;
+		background: var(--pastel-lavender);
+		/* transition-property: background, border-radius;
+		transition-duration: 1s, 0.5s;
+		transition-delay: 0s, 0.3s;
+		transition-timing-function: ease; */
+
+		/* transition 단축 속성 */
+		/* transition: transition-property transition-duration transition-delay transition-timing-function  */
+		transition:
+			background 2s 0s ease,
+			border-radius 1s 2s ease;
+
+		&:hover {
+			background: var(--pastel-orange);
+			border-radius: 50%;
+		}
+	}
+}
