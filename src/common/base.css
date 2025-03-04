@@ -5,11 +5,18 @@ body {
 	background-color: #fff;
 	line-height: 1.15;
 	font-weight: 300;
-
 }
 
 /* a 스타일 */
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+/* Component Container 스타일 */
+.componentContainer {
+	display: flex;
+	flex-flow: column nowrap;
+	row-gap: 1rem;
+	padding: 1rem;
 }

@@ -48,14 +48,14 @@
 	--state-offline: #dbdbdb;
 	--state-border: #ffffff;
 
-	position: static;
+	position: relative;
 	background-color: transparent;
 	border: none;
 	padding: 0;
 	width: var(--size);
 
 	img {
-		width: 100%;
+		width: 100%;	
 		aspect-ratio: 1/1;
 		object-fit: cover;
 		border-radius: var(--radius);
