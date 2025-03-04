@@ -1,0 +1,24 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+/* 텍스트 링크 */
+.textLink{  
+  display: inline-flex;
+  font-size: var(--font-md,.875rem);
+
+  &:hover{
+    background-color: var(--blue-100);
+  }
+  &:focus{
+    /* outline:1px solid red ; */
+    /* outline-offset: ; 아웃라인이 보여자는 너비를 변경 */
+    outline: none;
+    /* outline대신에 해주는 방법 */
+    box-shadow: 0 0 0 1px var(--blue-900); 
+    border-radius: var(--rounded-xs);
+    
+    /* 박스 그림자 스타일 속성 */
+    /* box-shadow: 1px 1px 1px 0.3px red;  */
+  }
+}
