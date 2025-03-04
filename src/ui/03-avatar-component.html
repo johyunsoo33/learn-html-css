@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>아바타 컴포넌트</title>
+		<link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
+		<link rel="icon" href="/src/assets/favicon/likelion.svg" />
+		<link rel="stylesheet" href="/src/ui/styles/03-avatar-component.css" />
+		<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			as="style"
+			crossorigin
+			href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+		/>
+	</head>
+	<body>
+		<h1>아바타 컴포넌트</h1>
+		<h2>인터렉션이 없는 아바타 컴포넌트</h2>
+		<figure class="imgAvatar">
+			<img src="/src/assets/face/face1.jpg" alt="사용자명" />
+			<figcaption class="avatarStatus online"><span class="sr-only">online</span></figcaption>
+		</figure>
+
+		<figure class="imgAvatar">
+			<img src="/src/assets/face/face1.jpg" alt="사용자명" />
+			<figcaption class="avatarStatus offline"><span class="sr-only">offline</span></figcaption>
+		</figure>
+
+		<figure class="imgAvatar">
+			<img src="/src/assets/face/face1.jpg" alt="사용자명" />
+			<figcaption class="avatarStatus isActive"><span class="sr-only">offline</span></figcaption>
+		</figure>
+
+		<h2>인터렉션이 있는 아바타 컴포넌트</h2>
+		<button type="button" class="btnAvatar" aria-label="offline">
+			<img src="/src/assets/face/face1.jpg" alt="사용자명" />
+			<!-- <span class="state offline"><span class="sr-only">offline</span></span> -->
+			<!-- 가상요소 선택자 스타일링 -->
+		</button>
+		<button type="button" class="btnAvatar isActive" aria-label="online">
+			<img src="/src/assets/face/face1.jpg" alt="사용자명" />
+			<!-- <span class="state offline"><span class="sr-only">offline</span></span> -->
+			<!-- 가상요소 선택자 스타일링 -->
+		</button>
+	</body>
+</html>
