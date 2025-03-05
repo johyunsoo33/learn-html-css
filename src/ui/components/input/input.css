@@ -4,30 +4,120 @@
 @import '/src/common/a11y.css';
 @import '/src/common/base.css';
 
-form{
-  display: contents;
+form {
+	display: contents;
 
-  fieldset{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    display: contents;
-  }
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+		display: contents;
+	}
 }
 
-
 /* 입력서식 기본 스타일 */
-.input{
-  background: yellow;
-  position: relative;
+/* .input {
+	background: yellow;
+	position: relative;
 
-  p{
-    font-size: var(--font-xs);
-    color: var(--red-500);
-    position: absolute;
-    bottom: 0;
-    inset-block-end: 0;
-    left: 0;
-    inset-inline-start: 0;
-    translate: 0 150%;
-  }
+	p {
+		font-size: var(--font-xs);
+		color: var(--red-500);
+		position: absolute;
+		bottom: 0;
+		inset-block-end: 0;
+		left: 0;
+		inset-inline-start: 0;
+		translate: 0 150%;
+		display: none;
+	}
+
+	input:placeholder-shown + p {
+		display: none;
+	}
+	input:user-invalid {
+		color: var(--red-900);
+	}
+	input:user-invalid + p {
+		display: block;
+	}
+} */
+/* 입력 서식 컴포넌트 */
+.input {
+	--text-color: var(--gray-600);
+	--fill-color: var(--white);
+	--outline-color: var(--gray-900);
+	--height: 3rem;
+	--spacing: var(--spacing-3);
+	--text-size: var(--font-base);
+
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	font-size: var(--text-size);
+	position: relative;
+	column-gap: var(--spacing);
+	color: var(--text-color);
+	/* .input__label */
+
+	/* .input__input */
+	input {
+		background: var(--fill-color);
+		border: 1px solid var(--outline-color);
+		height: var(--height);
+		padding: var(--spacing);
+		flex: 1 1 0;
+
+		/* 읽기 전용 */
+		&:read-only {
+			--text-color: var(--blue-300);
+
+			cursor: default;
+			pointer-events: none;
+		}
+
+		/* 비활성화 */
+		&:disabled {
+			--fill-color: var(--gray-200);
+
+			cursor: not-allowed;
+			opacity: 0.7;
+		}
+	}
+
+	/* .input__error-message */
+	p {
+		--text-color: var(--red-500);
+		--text-size: var(--font-xs);
+
+		display: none;
+		font-size: var(--text-size);
+		color: var(--text-color);
+		width: 100%;
+		inline-size: 100%;
+		position: absolute;
+		bottom: 0;
+		inset-block-end: 0;
+		translate: 0 0.75rem;
+	}
+
+	input:user-invalid + p {
+		display: block;
+	}
+	input:placeholder-shown + p {
+		display: none;
+	}
+}
+.floating-label {
+	input {
+		position: relative;
+	}
+	input:focus::placeholder {
+		color: rgb(167, 175, 255);
+		font-size: 10px;
+		position: absolute;
+		top: -0.0625rem;
+		left: 0.225rem;
+		transition: all 0.4s ease;
+	}
+}

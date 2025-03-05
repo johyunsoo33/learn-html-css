@@ -6,22 +6,32 @@
 
 /* 로고 컴포넌트 (img 요소) */
 .logo {
-  --size: 14.375rem;
+	--size: 14.375rem;
 
-  display: block;
-  width: var(--size, 14.375rem);
-  inline-size: var(--size, 14.375rem);
+	display: block;
+	width: var(--size, 14.375rem);
+	inline-size: var(--size, 14.375rem);
 }
 /* 로고 컴포넌트 (svg 요소) */
 .logo {
-  --size: 14.375rem;
+	--size: 14.375rem;
 
-  background-color: yellow;
-  svg {
-    display: block;
-    width: 100%;
-    inline-size: 100%;
-    height: auto;
-  }
+	background-color: yellow;
+	svg {
+		display: block;
+		width: 100%;
+		inline-size: 100%;
+		height: auto;
+	}
 }
 
+h3 {
+	width: 399px;
+	height: 59px;
+	img {
+		display: block;
+    
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
