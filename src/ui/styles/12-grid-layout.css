@@ -1,0 +1,87 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+.container {
+	display: grid;
+	height: 100vh;
+	padding: 20px;
+	margin: 0 auto;
+	grid-template-columns: repeat(1, 1fr);
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(12, 1fr);
+	}
+	@media (min-width: 1024px) {
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	/* 헤더 */
+	.header {
+		background: var(--pastel-coral);
+		height: 10vh;
+		/* grid-area: header; */
+		@media (min-width: 768px) {
+			grid-column: 1/-1;
+		}
+		@media (min-width: 1024px) {
+			grid-column: 1/-1;
+		}
+	}
+
+	/* 내비게이션 */
+	.navigation {
+		background: var(--pastel-green);
+		height: 15vh;
+		/* grid-area: nav; */
+		@media (min-width: 768px) {
+			grid-column: 1/-1;
+		}
+		@media (min-width: 1024px) {
+			grid-column: span 4;
+			block-size: 80vh;
+		}
+	}
+
+	/* 메인 콘텐츠 */
+	.content {
+		background: var(--pastel-aqua);
+		height: 40vh;
+		/* grid-area: mainContent; */
+		@media (min-width: 768px) {
+			grid-column: span 6;
+			block-size: 65vh;
+		}
+		@media (min-width: 1024px) {
+			grid-column: span 4;
+			block-size: 80vh;
+		}
+	}
+
+	/* 사이드 바 */
+	.sidebar {
+		background: var(--pastel-yellow);
+		height: 25vh;
+		/* grid-area: sidebar; */
+		@media (min-width: 768px) {
+			grid-column: span 6;
+			block-size: 65vh;
+		}
+		@media (min-width: 1024px) {
+			grid-column: span 4;
+			block-size: 80vh;
+		}
+	}
+
+	/* 푸터 */
+	.footer {
+		background: var(--pastel-lavender);
+		height: 10vh;
+		/* grid-area: footer; */
+		@media (min-width: 768px) {
+			grid-column: 1/-1;
+		}
+		@media (min-width: 1024px) {
+			grid-column: 1/-1;
+		}
+	}
+}

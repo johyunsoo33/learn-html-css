@@ -1,0 +1,35 @@
+@import url(/src/common/modern-reset.css);
+@import url(/src/common/theme.css);
+@import url(/src/ui/components/avatar/avatar.css);
+
+.imgAvatar,
+.avatarStatus {
+	position: initial !important;
+}
+
+/* 그리드 활용 */
+.gridBox {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	border: 1px soild gray;
+	padding: 32px;
+	justify-content: center;
+}
+.imgAvatar {
+	display: grid;
+
+	img,
+	figcaption {
+		grid-area: 1 / 1 / 2 / 2;
+	}
+
+	figcaption {
+		/* x축 정렬 */
+		/* justify-self: end; */
+		/* y축 정렬 */
+		/* align-self: end; */
+
+		place-self: end;
+	}
+}
