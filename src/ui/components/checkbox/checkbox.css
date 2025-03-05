@@ -43,7 +43,6 @@
 }
 
 .checkbox.svg {
-	background-color: yellow;
 	display: inline-flex;
 	align-items: center;
 	column-gap: var(--spacing-2);
