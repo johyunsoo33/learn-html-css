@@ -1,0 +1,28 @@
+@import url(/src/common/best-reset.css);
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+.menuListWrap {
+	--menu-text-color: #24388d;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 8px;
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: var(--menu-text-color);
+		font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		text-transform: uppercase;
+		transition: all 0.5s;
+
+		&:hover {
+			transition: all 0.5s;
+			font-weight: 600;
+			font-size: 20px;
+			color: #041560;
+		}
+	}
+}

@@ -1,0 +1,214 @@
+/* 이디야 예제 연습에 필요한 변수만 넣었습니다. */
+/* 각 변수 섹션은 ---------------------------로 구분하고 있습니다. */
+/* 같은 값이지만 변수 이름이 다른 여러 버전이 존재합니다. */
+/* 필요한 버전만 남기고 지우셔도 되고, 그대로 사용하셔도 됩니다. */
+/* 예를 들자면 v2만 필요하시면 나머지 버전을 지우셔도 되고 쓰셔도 됩니다. */
+/* 만약 --blue1말고 --blue-1을 사용하고 싶으시면 직접 추가하셔야 합니다. */
+
+/* 블러, 그리드 관련 속성은 나중에 업데이트합니다. */
+/* ps1. 혹시 블러와 그리드를 변수로 만드셨다면 공유..해주세요.. */
+/* ps2. 이상한 점, 오류, 오타, 궁금한 점 다 말씀해주세요 */
+
+:root {
+	/* text style v1 */
+	--section-title: 36px;
+	--link: 16px;
+	--label: 16px;
+	--headline: 18px;
+	--sub-headline: 14px;
+	--explain: 16px;
+	--element: 13px;
+
+	/* text style v2 */
+	--font-size36: 36px;
+	--font-size18: 18px;
+	--font-size16: 16px;
+	--font-size14: 14px;
+	--font-size13: 13px;
+
+	/* text style v3 */
+	--font-size-xl: 36px;
+	--font-size-lg: 18px;
+	--font-size-base: 16px;
+	--font-size-md: 14px;
+	--font-size-sm: 13px;
+
+	/* --------------------------- */
+	/* primary v1 */
+	--blue1: #24388d;
+	--blue2: #5b6aa9;
+	--blue3: #919bc6;
+	--blue4: #c8cde2;
+
+	/* primary v2 */
+	--primary1: #24388d;
+	--primary2: #5b6aa9;
+	--primary3: #919bc6;
+	--primary4: #c8cde2;
+
+	/* primary v3 */
+	--primary-blue1: #24388d;
+	--primary-blue2: #5b6aa9;
+	--primary-blue3: #919bc6;
+	--primary-blue4: #c8cde2;
+
+	/* --------------------------- */
+	/* secondary v1 */
+	--lightblue1: #bae5fb;
+	--lightblue2: #cbebfc;
+	--lightblue3: #dcf2fd;
+	--lightblue4: #eef8fe;
+	--violet1: #31287c;
+	--violet2: #645e9d;
+	--violet3: #9893bd;
+	--violet4: #cbc9de;
+
+	/* secondary v2 */
+	--secondary-lightblue1: #bae5fb;
+	--secondary-lightblue2: #cbebfc;
+	--secondary-lightblue3: #dcf2fd;
+	--secondary-lightblue4: #eef8fe;
+	--secondary-violet1: #31287c;
+	--secondary-violet2: #645e9d;
+	--secondary-violet3: #9893bd;
+	--secondary-violet4: #cbc9de;
+
+	/* --------------------------- */
+	/* accent v1 */
+	--amber1: #d2c9b6;
+	--amber2: #ddd6c8;
+	--amber3: #e8e4da;
+	--amber4: #f4f1ed;
+	--cream1: #f4ca54;
+	--cream2: #f7d77f;
+	--cream3: #f9e4a9;
+	--cream4: #fcf2d4;
+
+	/* accent v2 */
+	--accent-amber1: #d2c9b6;
+	--accent-amber2: #ddd6c8;
+	--accent-amber3: #e8e4da;
+	--accent-amber4: #f4f1ed;
+	--accent-cream1: #f4ca54;
+	--accent-cream2: #f7d77f;
+	--accent-cream3: #f9e4a9;
+	--accent-cream4: #fcf2d4;
+
+	/* --------------------------- */
+	/* grayscale v1 */
+	--white: #fefefe;
+	--snow: #f5f5f5;
+	--gray: #616161;
+	--lightgray: #878787;
+	--darkgray: #14182c;
+	--darkblack: #14182c;
+	--black: #0f0f0f;
+
+	/* grayscale v2 */
+	--grayscale1: #fefefe;
+	--grayscale2: #f5f5f5;
+	--grayscale3: #616161;
+	--grayscale4: #878787;
+	--grayscale5: #14182c;
+	--grayscale6: #14182c;
+	--grayscale7: #0f0f0f;
+
+	/* grayscale v3 */
+	--grayscale-white: #fefefe;
+	--grayscale-snow: #f5f5f5;
+	--grayscale-gray: #616161;
+	--grayscale-lightgray: #878787;
+	--grayscale-darkgray: #14182c;
+	--grayscale-darkblack: #14182c;
+	--grayscale-black: #0f0f0f;
+
+	/* --------------------------- */
+	/* gradient */
+	/* linear-gradient로 구현해야 하는데, 함수는 변수로 못씁니다.. */
+	/* 사용법은 아래 주석을 참고해주세요 */
+	--gradient-blue-angle: 43deg;
+	--gradient-blue-start: #102457;
+	--gradient-blue-end: #3a5abd;
+	--gradient-cream-angle: -43deg;
+	--gradient-cream-start: #f4ca54;
+	--gradient-cream-end: #fcf2d4;
+	--gradient-lightblue-angle: 40deg;
+	--gradient-lightblue-start: #bae5fb;
+	--gradient-lightblue-end: #eef8fe;
+
+	/* 그레디언트 블루 */
+	/* linear-gradient(
+    var(--gradient-blue-angle),
+    var(--gradient-blue-start),
+    var(--gradient-blue-end)
+  ); */
+
+	/* 그레디언트 크림 */
+	/* linear-gradient(
+    var(--gradient-cream-angle),
+    var(--gradient-cream-start),
+    var(--gradient-cream-end)
+  ); */
+
+	/* 그레디언트 라이트 블루 */
+	/* linear-gradient(
+    var(--gradient-lightblue-angle),
+    var(--gradient-lightblue-start),
+    var(--gradient-lightblue-end)
+  ); */
+
+	/* --------------------------- */
+	/* border v1 */
+	--casablanca: #f6b45a;
+	--iceberg: #d1eff1;
+	--tumble: #dab57e;
+	--lightlilac: #fcfcfe;
+
+	/* border v2 */
+	--border-casablanca: #f6b45a;
+	--border-iceberg: #d1eff1;
+	--border-tumble: #dab57e;
+	--border-lightlilac: #fcfcfe;
+
+	/* border v3 */
+	--border1: #f6b45a;
+	--border2: #d1eff1;
+	--border3: #dab57e;
+	--border4: #fcfcfe;
+
+	/* --------------------------- */
+	/* menu v1 */
+	--lightlilac: #fcfcfe;
+
+	/* menu v2 */
+	--menu-lightlilac: #fcfcfe;
+
+	/* menu v3 */
+	--menu1: #fcfcfe;
+
+	/* --------------------------- */
+	/* focus-visible v1 */
+	--focus-visible: 0 0 0 4px rgba(40, 70, 204, 0.9);
+
+	/* --------------------------- */
+	/* shadow v1 */
+	--type1: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+	--type2: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+	--type3: 3px 5px 10px 0 rgba(0, 0, 0, 0.35);
+	--type4: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+	--type5: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+	/* shadow v2 */
+	--shadow-type1: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+	--shadow-type2: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+	--shadow-type3: 3px 5px 10px 0 rgba(0, 0, 0, 0.35);
+	--shadow-type4: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+	--shadow-type5: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+	/* shadow v3 */
+	--box-shadow-type1: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+	--box-shadow-type2: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+	--box-shadow-type3: 3px 5px 10px 0 rgba(0, 0, 0, 0.35);
+	--box-shadow-type4: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+	--box-shadow-type5: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}

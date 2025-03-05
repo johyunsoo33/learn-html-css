@@ -1,0 +1,11 @@
+@import url(/retrospect/logo/style/logo.css);
+@import url(/retrospect/headerNav/style/nav.css);
+
+header {
+	.headerWrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
