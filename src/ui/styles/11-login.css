@@ -10,3 +10,56 @@
 @import '/scr/ui/components/text-link/text-link.css';
 @import '/src/ui/components/switch/switch.css';
 @import '/src/ui/components/button/button.css';
+
+.container {
+	padding: 0 var(--spacing-4);
+	/* dvh 동적 뷰포트에데해 알아볼것 */
+	/* min-height: 100dvh; */
+}
+
+/* 헤더 */
+.loginHeader {
+	padding: 4.375rem 2.8125rem;
+
+	@media (min-width: 768px) {
+		padding: 6.25rem 0 3.125rem;
+	}
+	.logo {
+		margin: 0 auto;
+	}
+}
+
+/* 포그인 폼 */
+.loginForm {
+	display: flex;
+	flex-flow: column nowrap;
+	row-gap: var(--spacing-4);
+
+	fieldset {
+		display: contents;
+	}
+	.checkboxWrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		order: 1;
+
+		.textLink {
+			margin-left: auto;
+			margin-inline-start: auto;
+			margin-right: 4px;
+		}
+	}
+
+	.button {
+		margin-top: var(--spacing-3);
+		margin-block-start: var(--spacing-3);
+		text-align: center;
+		height: 3.75rem;
+		block-size: 3.75rem;
+
+		&:focus-visible {
+			box-shadow: 0 0 0 1px var(--red-500);
+		}
+	}
+}
