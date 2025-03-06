@@ -1,0 +1,75 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+.container {
+	min-height: 100vh;
+	min-block-size: 100vh;
+	display: grid;
+	/* [full-start] 1fr [content-start] 이름안에 크기가 실제 영역의 크기이고 이름 사이에 적어주면
+	[full-start]  [content-start] 사이의 공간이 1fr이다 라고 말하는것 */
+
+	/* 
+		결론: Grid가 배치하는 방식의 차이
+		방식	빈 공간 자동 채우기	설명
+		grid-template-areas	✅ 자동적으로 채워짐	배치할 공간을 미리 설정하므로, 빈 공간이 있으면 자동으로 확장됨
+		라인 이름 [full-start] 등	❌ 자동적으로 안 채워짐	단순히 "위치 기준"을 정의하는 것이므로, 자동 확장되지 않음
+	*/
+
+	/* grid-template-columns: [full-start] 1fr [content-start] 8fr [content-end] 1fr [full-end]; */
+	/* grid-template-rows: 1fr 1fr 8fr 1fr 1fr; */
+	/* grid-template-rows: repeat(auto-fit, 1fr); */
+
+	grid-template-columns:
+		[full-start] minmax(1rem, 1fr) [content-start]repeat(12, minmax(1rem, 1fr))
+		[content-end] minmax(1rem, 1fr) [full-end];
+
+	/* 	grid-auto-flow는 요소가 그리드 내에 빈공간을 채워넣게하는 기능 */
+	/*dense는 요소가 그리드내에 빈공간을 마크업구조를 따라 배치되는게아닌 비어있는공간을 채워넣는것 */
+	grid-auto-flow: dense;
+	/* 헤더 */
+	.header {
+		background: var(--pastel-coral);
+		grid-column: content;
+	}
+
+	/* 내비게이션 */
+	.navigation {
+		background: var(--pastel-green);
+		grid-column: full;
+		display: grid;
+		/* Grid 레이아웃에서 하위 그리드를 만들 때 사용하는 특수한 값입니다. 
+		주로 자식 요소가 부모 그리드의 레이아웃을 상속받도록 하고 싶을 때 사용됩니다. */
+		/* 부모도 레이아웃을 유지하고 자식도 부모가 가진 그리드 레이아웃을 동일하게 받게된다. */
+		grid-template-columns: subgrid;
+
+		.menu {
+			background-color: var(--pastel-mauve);
+			grid-column: content;
+			display: grid;
+			grid-template-columns: subgrid;
+
+			li{
+				grid-column: span 3;
+			}
+		}
+	}
+
+	/* 메인 콘텐츠 */
+	.main {
+		background: var(--pastel-aqua);
+		grid-column: content;
+	}
+
+	/* 사이드 바 */
+	.sidebar {
+		background: var(--pastel-yellow);
+		grid-column: content;
+	}
+
+	/* 푸터 */
+	.footer {
+		background: var(--pastel-lavender);
+		grid-column: full;
+	}
+}
