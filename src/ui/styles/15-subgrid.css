@@ -1,0 +1,57 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+/* 카드 컴포넌트 */
+.card {
+	border: 1px solid var(--pastel-gray);
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 0 0 8px 1px var(--pastel-gray);
+	display: flex;
+	flex-flow: column nowrap;
+
+	.subject {
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+
+	.thumbnail {
+		order: -1;
+		/* 원본 이미지 크기를 3 / 2 비율로 조절하고 위치 설정 */
+		img {
+			aspect-ratio: 4/3;
+			width: 100%;
+			object-fit: cover;
+			object-position: 50% 0;
+		}
+	}
+	.content {
+		line-height: 1.5;
+	}
+	.moreInfo {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: #150d45;
+		color: #fff;
+		padding: 1em;
+	}
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+	gap: 1.25rem;
+
+	.card {
+		display: grid;
+		/* 부모 그리드의 행 규칙을 상속 */
+		grid-template-rows: subgrid;
+		/* 4개의 행을 차지하도록 설정 */
+		/* 왜 따로 설정해야하냐면 행의 규칙(몇개의 행을 가지고 행마다 얼마의 크기를 가지는지)만 상속을 받은거지   */
+		/* 자식이 어디까지의 행 가져야하는지를 명확하게 이야기해주야 */
+		/*  subgrid된 자식요소가 가진 요소들을 배치할수있다.*/
+		grid-row: span 4;
+	}
+}
