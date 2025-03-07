@@ -1,0 +1,45 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+img {
+	pointer-events: none;
+}
+.selectWrap {
+	--gray: #757575;
+	display: inline-grid;
+	grid-template-columns: repeat(1, 1fr);
+
+	.globalIcon,
+	.selectBox,
+	.selectIcon {
+		grid-area: 1 / 1 / 2 / 2;
+	}
+	.globalIcon {
+		width: fit-content;
+		align-self: center;
+		padding-left: 0.5rem;
+		z-index: 1;
+		pointer-events: none;
+	}
+	.selectIcon {
+		width: fit-content;
+		align-self: center;
+		justify-self: end;
+		padding-right: 0.5rem;
+		z-index: 1;
+		pointer-events: none;
+	}
+	.selectBox {
+		background: transparent;
+		appearance: none;
+		padding: 0.5em 1.75em;
+		border-radius: 7px;
+		border: 1px solid var(--gray);
+		appearance: none;
+		option {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+}
