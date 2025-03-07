@@ -6,8 +6,8 @@
 	color-scheme: light dark;
 }
 body {
-	--dark-color: var(--pastel-coral);
-	--light-color: var(--pastel-green);
+	--light-color: var(--pastel-dark-blue);
+	--dark-color: var(--pastel-green);
 
 	background-color: var(--pastel-coral);
 	color: #000;
