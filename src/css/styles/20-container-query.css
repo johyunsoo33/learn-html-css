@@ -1,0 +1,92 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+/* 카드 리스트 */
+.cardlist {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (min-width: 1280px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+/* 카드 아이템   */
+.cardItem {
+	container-type: inline-size;
+	container-name: item;
+}
+
+/* 카드 컴포넌트 */
+.card {
+	border: 1px solid var(--pastel-gray);
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 0 0 8px 1px var(--pastel-gray);
+	display: grid;
+	gap: 1rem;
+
+	@container item (min-width:567px) {
+		grid-template-columns: 3fr 7fr;
+		grid-auto-rows: auto;
+		grid-template-areas: 'thumbnail subject' 'thumbnail content' 'thumbnail more';
+
+		.thumbnail {
+			grid-area: thumbnail;
+		}
+
+		.subject {
+			grid-area: subject;
+		}
+
+		.content {
+			grid-area: content;
+		}
+
+		.more {
+			grid-area: more;
+		}
+	}
+
+	.subject {
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+
+	.thumbnail {
+		order: -1;
+		img {
+			aspect-ratio: 4/3;
+			width: 100%;
+			object-fit: cover;
+			object-position: 50% 0;
+		}
+	}
+	.content {
+		line-height: 1.5;
+	}
+	.more {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: #150d45;
+		color: #fff;
+		padding: 1em;
+	}
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+	gap: 1.25rem;
+
+	.card {
+		display: grid;
+		grid-template-rows: subgrid;
+		grid-row: span 4;
+	}
+}

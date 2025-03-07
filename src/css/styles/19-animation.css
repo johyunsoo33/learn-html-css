@@ -1,0 +1,253 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+@import url(/src/ui/components/button/button.css);
+:root {
+	color-scheme: light dark;
+}
+body {
+	margin: 20px;
+	background-color: light-dark(#fff, #000);
+	color: light-dark(#000, #fff);
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+	grid-auto-rows: 300px;
+	gap: 1.25rem;
+}
+.case {
+	border: 1px solid light-dark(#000, #fff);
+	padding: 2.5rem;
+	position: relative;
+
+	button {
+		border-radius: 0.5rem;
+		padding: 0.5rem 1rem;
+	}
+	strong {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+	}
+	.toggle-animation {
+		background-color: var(--pastel-dark-blue);
+		color: #fff;
+	}
+	.toggle-animation.pausd {
+		background-color: #e03131;
+	}
+	.reset-animation {
+		background-color: #15aabf;
+		color: #fff;
+	}
+	.target-animation {
+		font-size: 2rem;
+		text-align: center;
+		align-content: center;
+		padding: 0.625rem;
+		margin-top: 2.5rem;
+		margin-block-start: 2.5rem;
+		border-radius: 8px;
+		color: #fff;
+		background: linear-gradient(135deg, #37b24d, #2b8a3e);
+	}
+}
+/* Fade Animation */
+@keyframes fade {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+/* Shrink Animation */
+@keyframes shrink {
+	0%,
+	100% {
+		width: 100%;
+	}
+	50% {
+		width: 50%;
+	}
+}
+/* Bounce Animation */
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+/* Shake Animation */
+@keyframes Shake {
+	0%,
+	100% {
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translateX(20px);
+	}
+}
+/* Spin Animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0turn);
+	}
+	100% {
+		transform: rotate(1turn);
+	}
+}
+/* Pulse Animation */
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+}
+/*flip Animation*/
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+	}
+	100% {
+		transform: perspective(500px) rotateY(360deg);
+	}
+}
+/* Wobble Animation */
+@keyframes wobble {
+	0%,
+	100% {
+		transform: translateX(0%) rotate(0deg);
+	}
+	15% {
+		transform: translateX(-15px) rotate(-5deg);
+	}
+	30% {
+		transform: translateX(10px) rotate(3deg);
+	}
+	45% {
+		transform: translateX(-10px) rotate(-3deg);
+	}
+	60% {
+		transform: translateX(5px) rotate(2deg);
+	}
+	75% {
+		transform: translateX(-5px) rotate(-1deg);
+	}
+}
+@keyframes glow {
+	0%,
+	100% {
+		box-shadow: 0 0 5px light-dark(rgb(0 0 0 /0.5), rgb(255 255 255 /0.5));
+	}
+	50% {
+		box-shadow: 0 0 10px light-dark(rgb(0 0 0 /0.6), rgb(255 255 255 /0.6));
+	}
+}
+
+@property --rotation {
+	syntax: '<angle>';
+	inherits: false;
+	initial-value: 0deg;
+}
+@keyframes rotate {
+	from {
+		--rotation: 0deg;
+	}
+	to {
+		--rotation: 360deg;
+	}
+}
+
+.case-0 .target-animation {
+	animation: bounce 0.5s infinite ease-in-out both;
+	animation-play-state: paused;
+}
+.case-01 .target-animation {
+	/* animation-name: fade;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-delay: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards; */
+	animation: fade 3s infinite 1s linear both;
+	animation-play-state: paused;
+}
+.case-02 .target-animation {
+	animation: shrink 2s ease-in-out both;
+	animation-play-state: paused;
+}
+.case-03 .target-animation {
+	animation: Shake 0.4s infinite ease-in-out;
+	animation-play-state: paused;
+}
+
+.case-04 .target-animation {
+	background-image: radial-gradient(
+		circle farthest-corner at -4.1% 49.8%,
+		rgba(247, 127, 127, 1) 0%,
+		rgba(255, 175, 90, 1) 20.8%,
+		rgba(151, 255, 114, 1) 43.8%,
+		rgba(149, 251, 255, 1) 65.2%,
+		rgba(147, 145, 255, 1) 84.3%,
+		rgba(255, 147, 248, 1) 100.2%
+	);
+	animation: spin 1.5s infinite ease-in-out;
+	animation-play-state: paused;
+	width: 150px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+}
+.case-05 .target-animation {
+	animation: pulse 1.5s infinite ease-in-out;
+	animation-play-state: paused;
+}
+.case-06 .target-animation {
+	animation: flip 2s infinite ease-in-out;
+	animation-play-state: paused;
+}
+.case-07 .target-animation {
+	animation: wobble 2s infinite ease-in-out;
+	animation-play-state: paused;
+}
+.case-08 .target-animation {
+	animation: glow 2s infinite ease-in-out;
+	animation-play-state: paused;
+}
+.case-09 .target-animation {
+	width: 150px;
+	aspect-ratio: 1/1;
+	position: relative;
+
+	&::before,
+	&::after {
+		--rotation: 0deg;
+		box-sizing: content-box;
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		inset: 50%;
+		translate: -50% -50%;
+		background: conic-gradient(from var(--rotation), red, blue, green, darkblue, yellow, aqua, red);
+		padding: 2px;
+		z-index: -1;
+		border-radius: 8px;
+		animation: rotate 1s infinite linear;
+		animation-play-state: paused;
+	}
+
+	&::before {
+		filter: blur(15px);
+	}
+}
