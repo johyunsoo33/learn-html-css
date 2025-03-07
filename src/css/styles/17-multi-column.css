@@ -1,0 +1,70 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.container {
+	background-color: var(--pastel-pink);
+	padding: 1rem;
+
+	.case {
+		border: 1px solid red;
+		margin-block: 20px;
+	}
+
+	/* case01 column-width */
+	.case-01 {
+		column-width: 15rem;
+		column-rule: 3px double red;
+		column-gap: 2rem;
+	}
+	/* case02 column-count */
+	.case-02 {
+		column-count: 4;
+	}
+	/*  colums: [column-width] [column-count] */
+	/* column-width , column-count 생략가능  */
+	/* 단위가 있으면 너비 단위가 없으면 카운터 */
+	/* 두개의 값이 모두 적용되지 않는다. */
+	/* case03 colums: 단축속성에 column-width 적용 */
+	.case-03 {
+		columns: 5rem;
+		column-rule: 3px double blue;
+
+		span {
+			display: block;
+			column-span: all;
+			background: #240f45;
+			color: #fff;
+			padding: 0.5em;
+		}
+	}
+	/*  case04 colums: 단축속성에 column-count 적용 */
+	.case-04 {
+		columns: 2;
+		column-rule: 3px double red;
+	}
+	/*case05 column-fill: auto;  */
+	.case-05 {
+		column-fill: auto;
+		columns: 2;
+	}
+}
+
+.wrapper {
+	background-color: var(--pastel-ivory);
+	/* break-before:; css에서 요소 앞에 줄 바꿈을 강제로 삽입하는데 사용되는속성 */
+	/* break-before:; css에서 요소 앞에 줄 바꿈을 강제로 삽입하는데 사용되는속성 */
+	padding: 1em;
+	columns: 2;
+
+	.case {
+		/* break-after:; css에서 요소 뒤에 줄 바꿈을 강제로 삽입하는데 사용되는속성 */
+		/* break-after: always; */
+		/* break-after: avoid; */
+
+		span {
+			break-after: page;
+		}
+	}
+}

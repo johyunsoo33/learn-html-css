@@ -1,0 +1,26 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+:root {
+	color-scheme: light dark;
+}
+body {
+	--dark-color: var(--pastel-coral);
+	--light-color: var(--pastel-green);
+
+	background-color: var(--pastel-coral);
+	color: #000;
+	margin: 50px;
+	/* 운영체제 설정이 다크모드일때 */
+	@media (prefers-color-scheme: dark) {
+		background-color: var(--pastel-dark-blue);
+		color: #fff;
+	}
+}
+
+h1 {
+	/* light-dark(light 모드일때 색상 , Dark 모드일때 색상) */
+	/* color: light-dark(var(--red-500), var(--blue-900)); */
+	color: light-dark(var(--light-color), var(--dark-color));
+}
