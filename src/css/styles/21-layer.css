@@ -1,0 +1,44 @@
+/* 여기서의 선언 순서에 따라 우선순위가 결정된다. */
+/* 여기서 나중에 선언된 이름이 먼저 스타일링되더라도 
+먼저 선언된이름보다 우선순위가 높아서 먼저 선언된게 묻힌다   */
+@layer module, state;
+
+@layer state {
+	.alert {
+		background-color: brown !important;
+	}
+	p {
+		border: medium solid limegreen;
+		padding: 2em !important;
+	}
+	p.alert {
+		background-color: purple !important;
+	}
+}
+@layer module {
+	.alert {
+		border: medium solid violet;
+		background-color: yellow;
+		color: white;
+	}
+	p {
+		padding: 1em !important;
+	}
+	p.alert {
+		padding: 3em;
+		background-color: red !important;
+	}
+}
+/* !important는 다 이긴다!(역순으로 적용됨) */
+/* 이름을 선언하지않은 레이어가 이름을 선언한 레이어보다 우선순위가 높다 */
+@layer {
+	p.alert {
+		padding: 3em;
+		background-color: blueviolet !important;
+	}
+}
+/* @layer를 하지 않은 일반적인 모습이 이름을 선언하지않은 레이어보다 우선순위가 높다. */
+p.alert {
+	background-color: gold !important;
+	padding: 4em !important;
+}
